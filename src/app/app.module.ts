@@ -11,6 +11,7 @@ import { GerenteComponent } from './navigation/gerente/gerente.component';
 import { VentaComponent } from './navigation/venta/venta.component';
 import { NavbarHomeComponent } from './navbars/navbar-home/navbar-home.component';
 import { HeaderComponent } from './components/header/header.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HeaderComponent } from './components/header/header.component';
     VentaComponent,
     NavbarHomeComponent,
     HeaderComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
