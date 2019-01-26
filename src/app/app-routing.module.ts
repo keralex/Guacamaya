@@ -21,7 +21,8 @@ const routes: Routes = [
 {
   path:'ventas',
   children:[
-    {path:'',component:VuelosDisponiblesComponent},
+    {path:'',redirectTo:'vuelos',pathMatch:'full'},
+    {path:'vuelos',component:VuelosDisponiblesComponent},
     {path:'ventaPasaje',component:VentaPasajeComponent},
     {path:'registroPasajeros',component:DatosPasajeroComponent},
     {path:'compra',component:CompraComponent}
