@@ -12,6 +12,11 @@ import { VentaComponent } from './navigation/venta/venta.component';
 import { NavbarHomeComponent } from './navbars/navbar-home/navbar-home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LoginComponent } from './components/login/login.component';
+import { VentaPasajeComponent } from './components/venta-pasaje/venta-pasaje.component';
+import { VuelosDisponiblesComponent } from './components/vuelos-disponibles/vuelos-disponibles.component';
+import { DatosPasajeroComponent } from './components/datos-pasajero/datos-pasajero.component';
+import { CompraComponent } from './components/compra/compra.component';
+import { NavbarVentaComponent } from './navbars/navbar-venta/navbar-venta.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +30,11 @@ import { LoginComponent } from './components/login/login.component';
     NavbarHomeComponent,
     HeaderComponent,
     LoginComponent,
+    VentaPasajeComponent,
+    VuelosDisponiblesComponent,
+    DatosPasajeroComponent,
+    CompraComponent,
+    NavbarVentaComponent,
   ],
   imports: [
     BrowserModule,
