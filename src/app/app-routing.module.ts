@@ -7,6 +7,14 @@ import { VentaPasajeComponent } from './components/venta-pasaje/venta-pasaje.com
 import { DatosPasajeroComponent } from './components/datos-pasajero/datos-pasajero.component';
 import { CompraComponent } from './components/compra/compra.component';
 import { VentaComponent } from './navigation/venta/venta.component';
+import { RegistroAbordarComponent } from './components/registro-abordar/registro-abordar.component';
+import { AsientoComponent } from './components/asiento/asiento.component';
+import { EquipajeComponent } from './components/equipaje/equipaje.component';
+import { CheckInComponent } from './navigation/check-in/check-in.component';
+import { AsignarVueloComponent } from './components/asignar-vuelo/asignar-vuelo.component';
+import { HotelComponent } from './components/hotel/hotel.component';
+import { ManifiestoComponent } from './components/manifiesto/manifiesto.component';
+import { DevolucionComponent } from './components/devolucion/devolucion.component';
 
 const routes: Routes = [
   // home
@@ -28,6 +36,20 @@ const routes: Routes = [
     {path:'ventaPasaje/registroPasajeros/compra',component:CompraComponent}
   ],component:VentaComponent
 
+},
+// check-in
+{
+  path:'check_in',
+  children:[
+    {path:'',redirectTo:'check_in_abordar',pathMatch:'full'},
+    {path:'check_in_abordar',component:RegistroAbordarComponent},
+    {path:'check_in_abordar/asientos',component:AsientoComponent},
+    {path:'check_in_abordar/asientos/equipaje',component:EquipajeComponent},
+    {path:'Asignar_vuelo',component:AsignarVueloComponent},
+    {path:'hotel',component:HotelComponent},
+    {path:'manifiesto',component:ManifiestoComponent},
+    {path:'devolucion',component:DevolucionComponent}
+  ],component:CheckInComponent
 }
 ];
 

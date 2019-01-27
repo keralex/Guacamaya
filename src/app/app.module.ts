@@ -18,7 +18,6 @@ import { DatosPasajeroComponent } from './components/datos-pasajero/datos-pasaje
 import { CompraComponent } from './components/compra/compra.component';
 import { NavbarVentaComponent } from './navbars/navbar-venta/navbar-venta.component';
 import { AsientoComponent } from './components/asiento/asiento.component';
-import { ReservaAsientoComponent } from './components/reserva-asiento/reserva-asiento.component';
 import { RegistroAbordarComponent } from './components/registro-abordar/registro-abordar.component';
 import { EquipajeComponent } from './components/equipaje/equipaje.component';
 import { AsignarVueloComponent } from './components/asignar-vuelo/asignar-vuelo.component';
@@ -45,7 +44,6 @@ import { NavbarCheckInComponent } from './navbars/navbar-check-in/navbar-check-i
     CompraComponent,
     NavbarVentaComponent,
     AsientoComponent,
-    ReservaAsientoComponent,
     RegistroAbordarComponent,
     EquipajeComponent,
     AsignarVueloComponent,

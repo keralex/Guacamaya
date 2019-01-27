@@ -1,3 +1,34 @@
-<p>
-  navbar-check-in works!
-</p>
+<nav class="navbar navbar-light navbar-expand-lg bg-light" style="background-color: #e3f2fd;">
+    <!-- Navbar content -->
+    <a class="navbar-brand" href="#">Vuelos Guacamayas</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" routerLink="check_in_abordar">Check-In</a>
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Vuelo Cancelado
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" routerLink="manifiesto">Manifiesto</a>
+                <a class="dropdown-item" routerLink="Asignar_vuelo">Asignar Vuelo</a>
+                <a class="dropdown-item" routerLink="devolucion">Devolucion de dinero</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Sobreventa
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" routerLink="Asignar_vuelo">Asignar vuelo</a>
+                  <a class="dropdown-item" routerLink="hotel">Asignar Hotel</a>
+                </div>
+              </li>
+     
+    </div>
+  </div>
+  </nav>
