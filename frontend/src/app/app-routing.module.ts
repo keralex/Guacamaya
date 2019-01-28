@@ -15,6 +15,7 @@ import { AsignarVueloComponent } from './components/asignar-vuelo/asignar-vuelo.
 import { HotelComponent } from './components/hotel/hotel.component';
 import { ManifiestoComponent } from './components/manifiesto/manifiesto.component';
 import { DevolucionComponent } from './components/devolucion/devolucion.component';
+import { AsignarVueloSobreventaComponent } from './components/asignar-vuelo-sobreventa/asignar-vuelo-sobreventa.component';
 
 const routes: Routes = [
   // home
@@ -46,6 +47,7 @@ const routes: Routes = [
     {path:'check_in_abordar/asientos',component:AsientoComponent},
     {path:'check_in_abordar/asientos/equipaje',component:EquipajeComponent},
     {path:'Asignar_vuelo',component:AsignarVueloComponent},
+    {path:'Asignar_vuelo_sobreventa',component:AsignarVueloSobreventaComponent},
     {path:'hotel',component:HotelComponent},
     {path:'manifiesto',component:ManifiestoComponent},
     {path:'devolucion',component:DevolucionComponent}

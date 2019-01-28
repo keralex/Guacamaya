@@ -25,6 +25,7 @@ import { DevolucionComponent } from './components/devolucion/devolucion.componen
 import { ManifiestoComponent } from './components/manifiesto/manifiesto.component';
 import { HotelComponent } from './components/hotel/hotel.component';
 import { NavbarCheckInComponent } from './navbars/navbar-check-in/navbar-check-in.component';
+import { AsignarVueloSobreventaComponent } from './components/asignar-vuelo-sobreventa/asignar-vuelo-sobreventa.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { NavbarCheckInComponent } from './navbars/navbar-check-in/navbar-check-i
     ManifiestoComponent,
     HotelComponent,
     NavbarCheckInComponent,
+    AsignarVueloSobreventaComponent,
   ],
   imports: [
     BrowserModule,
