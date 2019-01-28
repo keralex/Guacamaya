@@ -1,10 +1,10 @@
 module.exports = (sequelize, type) => {
     return sequelize.define('customer', {
-        id: {
+       customes_id: {
           type: type.INTEGER,
           primaryKey: true,
           autoIncrement: true
         },
-        name: type.STRING
+       first_name: type.STRING
     })
 }
