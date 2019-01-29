@@ -16,6 +16,8 @@ import { HotelComponent } from './components/hotel/hotel.component';
 import { ManifiestoComponent } from './components/manifiesto/manifiesto.component';
 import { DevolucionComponent } from './components/devolucion/devolucion.component';
 import { AsignarVueloSobreventaComponent } from './components/asignar-vuelo-sobreventa/asignar-vuelo-sobreventa.component';
+import { PasajerosAbordoComponent } from './components/pasajeros-abordo/pasajeros-abordo.component';
+import { PasajesVendidosComponent } from './components/pasajes-vendidos/pasajes-vendidos.component';
 
 const routes: Routes = [
   // home
@@ -30,11 +32,12 @@ const routes: Routes = [
 {
   path:'ventas',
   children:[
-    {path:'',redirectTo:'vuelos',pathMatch:'full'},
+    {path:'',redirectTo:'ventaPasaje',pathMatch:'full'},
     {path:'vuelos',component:VuelosDisponiblesComponent},
     {path:'ventaPasaje',component:VentaPasajeComponent},
     {path:'ventaPasaje/registroPasajeros',component:DatosPasajeroComponent},
-    {path:'ventaPasaje/registroPasajeros/compra',component:CompraComponent}
+    {path:'ventaPasaje/registroPasajeros/compra',component:CompraComponent},
+    {path:'pasajes',component:PasajesVendidosComponent}
   ],component:VentaComponent
 
 },
@@ -50,7 +53,8 @@ const routes: Routes = [
     {path:'Asignar_vuelo_sobreventa',component:AsignarVueloSobreventaComponent},
     {path:'hotel',component:HotelComponent},
     {path:'manifiesto',component:ManifiestoComponent},
-    {path:'devolucion',component:DevolucionComponent}
+    {path:'devolucion',component:DevolucionComponent},
+    {path:'pasajeros_abordo',component:PasajerosAbordoComponent}
   ],component:CheckInComponent
 }
 ];

@@ -3,7 +3,7 @@
      
       <div class="col-lg-8">
           <div class="container box shadow-lg p-3 mb-5 bg-white rounded">
-              <form>
+              <form #pasajeroForm="ngForm" (ngSubmit)="addPasajero(PasajeroForm)">
                 <h3>Registro de pasajeros</h3>
                   <div class="form-row">
                     <div class="form-group col-md-6">

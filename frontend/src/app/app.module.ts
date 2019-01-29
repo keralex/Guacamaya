@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {FormsModule} from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './navigation/home/home.component';
@@ -26,6 +26,8 @@ import { ManifiestoComponent } from './components/manifiesto/manifiesto.componen
 import { HotelComponent } from './components/hotel/hotel.component';
 import { NavbarCheckInComponent } from './navbars/navbar-check-in/navbar-check-in.component';
 import { AsignarVueloSobreventaComponent } from './components/asignar-vuelo-sobreventa/asignar-vuelo-sobreventa.component';
+import { PasajerosAbordoComponent } from './components/pasajeros-abordo/pasajeros-abordo.component';
+import { PasajesVendidosComponent } from './components/pasajes-vendidos/pasajes-vendidos.component';
 
 @NgModule({
   declarations: [
@@ -53,10 +55,13 @@ import { AsignarVueloSobreventaComponent } from './components/asignar-vuelo-sobr
     HotelComponent,
     NavbarCheckInComponent,
     AsignarVueloSobreventaComponent,
+    PasajerosAbordoComponent,
+    PasajesVendidosComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
