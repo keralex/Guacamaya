@@ -3,56 +3,56 @@
      
       <div class="col-lg-8">
           <div class="container box shadow-lg p-3 mb-5 bg-white rounded">
-              <form #pasajeroForm="ngForm" (ngSubmit)="addPasajero(PasajeroForm)">
+              <form #pasajeroForm="ngForm" (ngSubmit)="addPasajero(pasajeroForm)">
                 <h3>Registro de pasajeros</h3>
+                 
                   <div class="form-row">
-                    <div class="form-group col-md-6">
-                      <label for="inputEmail4">Vuelo</label>
-                      <input type="email" class="form-control" id="inputEmail4" placeholder="vuelo" disabled>
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label for="inputPassword4">Pasaje</label>
-                      <input type="password" class="form-control" id="inputPassword4" placeholder="pasaje" disabled>
-                    </div>
-                  </div>
-                  <div class="form-row">
+                      <!-- <div class="form-group col-md-6">
+                          <label for="inputEmail4">Vuelo</label>
+                          <input type="email" class="form-control" id="inputEmail4" placeholder="vuelo" disabled>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="inputPassword4">Pasaje</label>
+                          <input type="password" class="form-control" id="inputPassword4" placeholder="pasaje" disabled>
+                        </div> -->
                       <div class="form-group col-md-4">
-                        <label for="inputEmail4">Nombre</label>
-                        <input type="email" class="form-control" id="inputEmail4" placeholder="nombre">
+                        <label>Nombre</label>
+                        <input  class="form-control"  placeholder="nombre" type="text" id="name" name="name" #name="ngModel" [(ngModel)]="selectedPasajeroName">
                       </div>
-                      <div class="form-group col-md-4">
-                          <label for="inputEmail4">Apellido</label>
-                          <input type="email" class="form-control" id="inputEmail4" placeholder="apellido">
+                      <!-- <div class="form-group col-md-4">
+                          <label>Apellido</label>
+                          <input type="email" class="form-control"  placeholder="apellido" disabled>
                         </div>
                         <div class="form-group col-md-2">
-                            <label for="inputEmail4">Edad</label>
-                            <input type="email" class="form-control" id="inputEmail4" placeholder="edad">
+                            <label>Edad</label>
+                            <input type="email" class="form-control" placeholder="edad" disabled>
                           </div>
                           <div class="form-group col-md-2">
-                              <label for="inputEmail4">sexo</label>
-                              <select class="form-control" id="exampleFormControlSelect1">
+                              <label>sexo</label>
+                              <select class="form-control" disabled>
                                   <option>mujer</option>
                                   <option>hombre</option>
                                   <option>sin definir</option>
                                 </select>
+                            </div> -->
+
+<!-- 
+                            <div class="form-group col-md-6">
+                              <label>Pasaporte</label>
+                              <input type="email" class="form-control"  placeholder="Pasaporte" disabled>
                             </div>
+                            <div class="form-group col-md-6">
+                              <label>Cantidad de equipaje</label>
+                              <select class="form-control" disabled>
+                                  <option>1</option>
+                                  <option>2</option>
+                                </select>
+                            </div> -->
                   </div>
-                  <div class="form-row">
-                      <div class="form-group col-md-6">
-                        <label for="inputEmail4">Pasaporte</label>
-                        <input type="email" class="form-control" id="inputEmail4" placeholder="Pasaporte" >
-                      </div>
-                      <div class="form-group col-md-6">
-                        <label for="inputPassword4">Cantidad de equipaje</label>
-                        <select class="form-control" id="exampleFormControlSelect1">
-                            <option>1</option>
-                            <option>2</option>
-                          </select>
-                      </div>
-                    </div>
+                     
                     <div class="botones">
-                        <a routerLink="compra"  class="btn btn-primary" role="button">Siguiente</a>
-            
+                        <!-- <button routerLink="compra"  class="btn btn-primary" type="button">Siguiente</button> -->
+                        <button class="btn btn-primary" type="submit">Siguiente</button>
                     </div>  
             
                     </form>
