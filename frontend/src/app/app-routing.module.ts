@@ -18,6 +18,15 @@ import { DevolucionComponent } from './components/devolucion/devolucion.componen
 import { AsignarVueloSobreventaComponent } from './components/asignar-vuelo-sobreventa/asignar-vuelo-sobreventa.component';
 import { PasajerosAbordoComponent } from './components/pasajeros-abordo/pasajeros-abordo.component';
 import { PasajesVendidosComponent } from './components/pasajes-vendidos/pasajes-vendidos.component';
+import { PlanificarVueloComponent } from './components/planificar-vuelo/planificar-vuelo.component';
+import { RegistrarAvionesComponent } from './components/registrar-aviones/registrar-aviones.component';
+import { AsignarRutaComponent } from './components/asignar-ruta/asignar-ruta.component';
+import { ModificarEstadoAvionesComponent } from './components/modificar-estado-aviones/modificar-estado-aviones.component';
+import { ProveedoresComponent } from './components/proveedores/proveedores.component';
+import { AlquilarAvionComponent } from './components/alquilar-avion/alquilar-avion.component';
+import { RegistroFallasComponent } from './components/registro-fallas/registro-fallas.component';
+import { AsignarMantenimientoComponent } from './components/asignar-mantenimiento/asignar-mantenimiento.component';
+import { AdminVueloComponent } from './navigation/admin-vuelo/admin-vuelo.component';
 
 const routes: Routes = [
   // home
@@ -56,7 +65,22 @@ const routes: Routes = [
     {path:'devolucion',component:DevolucionComponent},
     {path:'pasajeros_abordo',component:PasajerosAbordoComponent}
   ],component:CheckInComponent
-}
+},
+//administrador de vuelo
+
+{path:'admin_vuelo',
+children:[
+  {path:'',redirectTo:'planificar',pathMatch:'full'},
+  {path:'planificar',component:PlanificarVueloComponent},
+  {path:'registrar_avion',component:RegistrarAvionesComponent},
+  {path:'asignar_ruta',component:AsignarRutaComponent},
+  {path:'modificar_estado_aviones',component:ModificarEstadoAvionesComponent},
+  {path:'proveedores',component:ProveedoresComponent},
+  {path:'alquilar_avion',component:AlquilarAvionComponent},
+  {path:'registro_fallas',component:RegistroFallasComponent},
+  {path:'asignar_mantenimiento',component:AsignarMantenimientoComponent},
+],component:AdminVueloComponent
+},
 ];
 
 @NgModule({

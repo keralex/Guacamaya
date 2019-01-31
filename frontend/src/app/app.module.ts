@@ -30,6 +30,15 @@ import { AsignarVueloSobreventaComponent } from './components/asignar-vuelo-sobr
 import { PasajerosAbordoComponent } from './components/pasajeros-abordo/pasajeros-abordo.component';
 import { PasajesVendidosComponent } from './components/pasajes-vendidos/pasajes-vendidos.component';
 import { PasajerosService } from './services/pasajeros.service';
+import { NavbarAdminComponent } from './navbars/navbar-admin/navbar-admin.component';
+import { PlanificarVueloComponent } from './components/planificar-vuelo/planificar-vuelo.component';
+import { RegistrarAvionesComponent } from './components/registrar-aviones/registrar-aviones.component';
+import { AsignarRutaComponent } from './components/asignar-ruta/asignar-ruta.component';
+import { ModificarEstadoAvionesComponent } from './components/modificar-estado-aviones/modificar-estado-aviones.component';
+import { ProveedoresComponent } from './components/proveedores/proveedores.component';
+import { AlquilarAvionComponent } from './components/alquilar-avion/alquilar-avion.component';
+import { RegistroFallasComponent } from './components/registro-fallas/registro-fallas.component';
+import { AsignarMantenimientoComponent } from './components/asignar-mantenimiento/asignar-mantenimiento.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +68,15 @@ import { PasajerosService } from './services/pasajeros.service';
     AsignarVueloSobreventaComponent,
     PasajerosAbordoComponent,
     PasajesVendidosComponent,
+    NavbarAdminComponent,
+    PlanificarVueloComponent,
+    RegistrarAvionesComponent,
+    AsignarRutaComponent,
+    ModificarEstadoAvionesComponent,
+    ProveedoresComponent,
+    AlquilarAvionComponent,
+    RegistroFallasComponent,
+    AsignarMantenimientoComponent,
   ],
   imports: [
     BrowserModule,
