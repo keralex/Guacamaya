@@ -1,8 +1,8 @@
 export class Pasajero {
-    constructor(_id=0, name=''){
-        this._id =_id;
-        this.name=name;
+    constructor(customer_id=0, first_name=''){
+        this.customer_id =customer_id;
+        this.first_name=first_name;
     }
-    _id:number;
-    name:string;
+    customer_id?:number;
+    first_name?:string;
 }

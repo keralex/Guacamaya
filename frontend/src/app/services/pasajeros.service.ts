@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import {Pasajero} from './../models/pasajero';
 @Injectable({
   providedIn: 'root'
@@ -7,10 +7,14 @@ import {Pasajero} from './../models/pasajero';
 export class PasajerosService {
 
   selectedPasajero: Pasajero;
-  selectedPasajeroName:String;
+  selectedPasajeroName:string;
+  selectedPasajeroId:number;
+
   
   pasajeros: Pasajero[];
-  URL_API ='http//localhost:3000/customers';
+  URL_API ='http://localhost:3002/catalog/customer/create';
+
+
 
 
   constructor(private http:HttpClient) { 
@@ -18,18 +22,23 @@ export class PasajerosService {
     
   }
   
+
+  
   getPasajeros(){
     return this.http.get(this.URL_API);
   }
   postPasajero(pasajero:Pasajero){
-    return this.http.post(this.URL_API, pasajero);
+    console.log("pasajero",pasajero)
+ 
+    return this.http.post<Pasajero>(this.URL_API, pasajero);
   }
   // Actualizar
   putPasajero(pasajero:Pasajero){
-    return this.http.put(this.URL_API+`/${pasajero._id}`,pasajero);
+    return this.http.put(this.URL_API+`/${pasajero.customer_id}`,pasajero);
   }
 
   deletePasajero(_id:number){
     return this.http.delete(this.URL_API+`/${_id}`);
   }
+
 }

@@ -9,7 +9,9 @@ import {NgForm} from '@angular/forms'
   providers:[PasajerosService]
 })
 export class DatosPasajeroComponent implements OnInit {
-  
+  selectedPasajeroName;
+
+
   constructor(private pasajeroservice:PasajerosService) {
   
    }
@@ -19,12 +21,18 @@ export class DatosPasajeroComponent implements OnInit {
 
   addPasajero(form:NgForm){
     console.log(form.value);
-    this.pasajeroservice.postPasajero(form.value).subscribe(res=>{
-      console.log('entro al post')
+    this.pasajeroservice.selectedPasajero.first_name=this.selectedPasajeroName;
+   console.log(this.pasajeroservice.selectedPasajero);
+  
+    this.pasajeroservice.postPasajero(this.pasajeroservice.selectedPasajero).subscribe(res=>{
+      console.log('entro al post');
       console.log(res);
     });
 
+  
+
   }
+
 
 
 
