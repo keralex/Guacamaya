@@ -30,12 +30,10 @@ import { AsignarVueloSobreventaComponent } from './components/asignar-vuelo-sobr
 import { PasajerosAbordoComponent } from './components/pasajeros-abordo/pasajeros-abordo.component';
 import { PasajesVendidosComponent } from './components/pasajes-vendidos/pasajes-vendidos.component';
 import { PasajerosService } from './services/pasajeros.service';
-<<<<<<< HEAD
 import { NavbarAdminGeneralComponent } from './navbars/navbar-admin-general/navbar-admin-general.component';
 import { ListaEmpleadosComponent } from './components/lista-empleados/lista-empleados.component';
 import { ListaUsuariosSistemaComponent } from './components/lista-usuarios-sistema/lista-usuarios-sistema.component';
 import { NavbarGerenteComponent } from './navbars/navbar-gerente/navbar-gerente.component';
-=======
 import { NavbarAdminComponent } from './navbars/navbar-admin/navbar-admin.component';
 import { PlanificarVueloComponent } from './components/planificar-vuelo/planificar-vuelo.component';
 import { RegistrarAvionesComponent } from './components/registrar-aviones/registrar-aviones.component';
@@ -45,7 +43,6 @@ import { ProveedoresComponent } from './components/proveedores/proveedores.compo
 import { AlquilarAvionComponent } from './components/alquilar-avion/alquilar-avion.component';
 import { RegistroFallasComponent } from './components/registro-fallas/registro-fallas.component';
 import { AsignarMantenimientoComponent } from './components/asignar-mantenimiento/asignar-mantenimiento.component';
->>>>>>> e3a1d546f72bd687579ef78da01bd3267a999a3a
 
 @NgModule({
   declarations: [
@@ -75,12 +72,10 @@ import { AsignarMantenimientoComponent } from './components/asignar-mantenimient
     AsignarVueloSobreventaComponent,
     PasajerosAbordoComponent,
     PasajesVendidosComponent,
-<<<<<<< HEAD
     NavbarAdminGeneralComponent,
     ListaEmpleadosComponent,
     ListaUsuariosSistemaComponent,
     NavbarGerenteComponent,
-=======
     NavbarAdminComponent,
     PlanificarVueloComponent,
     RegistrarAvionesComponent,
@@ -90,7 +85,6 @@ import { AsignarMantenimientoComponent } from './components/asignar-mantenimient
     AlquilarAvionComponent,
     RegistroFallasComponent,
     AsignarMantenimientoComponent,
->>>>>>> e3a1d546f72bd687579ef78da01bd3267a999a3a
   ],
   imports: [
     BrowserModule,
