@@ -30,6 +30,10 @@ import { AsignarVueloSobreventaComponent } from './components/asignar-vuelo-sobr
 import { PasajerosAbordoComponent } from './components/pasajeros-abordo/pasajeros-abordo.component';
 import { PasajesVendidosComponent } from './components/pasajes-vendidos/pasajes-vendidos.component';
 import { PasajerosService } from './services/pasajeros.service';
+import { NavbarAdminGeneralComponent } from './navbars/navbar-admin-general/navbar-admin-general.component';
+import { ListaEmpleadosComponent } from './components/lista-empleados/lista-empleados.component';
+import { ListaUsuariosSistemaComponent } from './components/lista-usuarios-sistema/lista-usuarios-sistema.component';
+import { NavbarGerenteComponent } from './navbars/navbar-gerente/navbar-gerente.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +63,10 @@ import { PasajerosService } from './services/pasajeros.service';
     AsignarVueloSobreventaComponent,
     PasajerosAbordoComponent,
     PasajesVendidosComponent,
+    NavbarAdminGeneralComponent,
+    ListaEmpleadosComponent,
+    ListaUsuariosSistemaComponent,
+    NavbarGerenteComponent,
   ],
   imports: [
     BrowserModule,

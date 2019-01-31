@@ -18,6 +18,9 @@ import { DevolucionComponent } from './components/devolucion/devolucion.componen
 import { AsignarVueloSobreventaComponent } from './components/asignar-vuelo-sobreventa/asignar-vuelo-sobreventa.component';
 import { PasajerosAbordoComponent } from './components/pasajeros-abordo/pasajeros-abordo.component';
 import { PasajesVendidosComponent } from './components/pasajes-vendidos/pasajes-vendidos.component';
+import { ListaEmpleadosComponent } from './components/lista-empleados/lista-empleados.component';
+import { ListaUsuariosSistemaComponent } from './components/lista-usuarios-sistema/lista-usuarios-sistema.component';
+import { GerenteComponent } from './navigation/gerente/gerente.component';
 
 const routes: Routes = [
   // home
@@ -56,7 +59,16 @@ const routes: Routes = [
     {path:'devolucion',component:DevolucionComponent},
     {path:'pasajeros_abordo',component:PasajerosAbordoComponent}
   ],component:CheckInComponent
-}
+},
+//gerente general
+{
+  path:'gerente_general',
+  children:[
+    {path:'', redirectTo:'lista_empleados',pathMatch:'full'},
+    {path:'lista_empleados',component:ListaEmpleadosComponent},
+    {path:'usuarios',component:ListaUsuariosSistemaComponent},
+  ],component:GerenteComponent
+},
 ];
 
 @NgModule({
