@@ -9,8 +9,14 @@ import {NgForm} from '@angular/forms'
   providers:[PasajerosService]
 })
 export class DatosPasajeroComponent implements OnInit {
-  selectedPasajeroName;
+  selectedPasajeroName:string;
+  selectedPasajeroApellido:string;
+  selectedPasajeroPasaporte:string;
+  selectedPasajeroEdad:number;
+  selectedPasajeroSexo:string;
+  selectedPasajeroPasaje:string;
 
+  public sexos=['Masculino','Femenino','no definido'];
 
   constructor(private pasajeroservice:PasajerosService) {
   
@@ -21,7 +27,13 @@ export class DatosPasajeroComponent implements OnInit {
 
   addPasajero(form:NgForm){
     console.log(form.value);
-    this.pasajeroservice.selectedPasajero.first_name=this.selectedPasajeroName;
+    this.pasajeroservice.selectedPasajero.nombre=this.selectedPasajeroName;
+    this.pasajeroservice.selectedPasajero.apellido=this.selectedPasajeroApellido;
+    this.pasajeroservice.selectedPasajero.edad=this.selectedPasajeroEdad;
+    this.pasajeroservice.selectedPasajero.pasaporte=this.selectedPasajeroPasaporte;
+    this.pasajeroservice.selectedPasajero.pasaje=this.selectedPasajeroPasaje;
+    this.pasajeroservice.selectedPasajero.sexo=this.selectedPasajeroSexo;
+
    console.log(this.pasajeroservice.selectedPasajero);
   
     this.pasajeroservice.postPasajero(this.pasajeroservice.selectedPasajero).subscribe(res=>{

@@ -2,34 +2,35 @@ var express = require('express');
 var router = express.Router();
 
 // Require controller modules.
-var customer_controller = require('../controllers/customerController');
+var pasajero_controller = require('../controllers/pasajeroController');
 
-/// customer ROUTES ///
 
-// GET request for creating customer. NOTE This must come before route for id (i.e. display customer).
-router.get('/customer/create', customer_controller.customer_create_get);
 
-// POST request for creating customer.
-router.post('/customer/create', customer_controller.customer_create_post);
+//pasajeros routes////////////
 
-// GET request to delete customer.
-router.get('/customer/:id/delete', customer_controller.customer_delete_get);
+// GET request for creating pasajero. NOTE This must come before route for id (i.e. display customer).
+router.get('/pasajero/create', pasajero_controller.pasajero_create_get);
 
-// POST request to delete customer.
-router.post('/customer/:id/delete', customer_controller.customer_delete_post);
+// POST request for creating pasajero.
+router.post('/pasajero/create', pasajero_controller.pasajero_create_post);
 
-// GET request to update customer.
-router.get('/customer/:id/update', customer_controller.customer_update_get);
+// GET request to delete pasajero.
+router.get('/pasajero/:id/delete', pasajero_controller.pasajero_delete_get);
 
-// POST request to update customer.
-router.post('/customer/:id/update', customer_controller.customer_update_post);
+// POST request to delete pasajero.
+router.post('/pasajero/:id/delete', pasajero_controller.pasajero_delete_post);
 
-// GET request for one customer.
-router.get('/customer/:id', customer_controller.customer_detail);
+// GET request to update pasajero.
+router.get('/pasajero/:id/update', pasajero_controller.pasajero_update_get);
+
+// POST request to update pasajero.
+router.post('/pasajero/:id/update', pasajero_controller.pasajero_update_post);
+
+// GET request for one pasajero.
+router.get('/pasajero/:id', pasajero_controller.pasajero_detail);
 
 // GET request for list of all customers.
-router.get('/customers', customer_controller.customer_list);
-
+router.get('/pasajero', pasajero_controller.pasajero_list);
 
 
 module.exports = router;

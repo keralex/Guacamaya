@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PasajerosService } from 'src/app/services/pasajeros.service';
+import { Pasajero } from 'src/app/models/pasajero';
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-pasajes-vendidos',
@@ -8,15 +11,22 @@ import { PasajerosService } from 'src/app/services/pasajeros.service';
   providers:[PasajerosService]
 })
 export class PasajesVendidosComponent implements OnInit {
-  pasajeros;
+  pasajeros:Observable<Pasajero>;
 
   constructor(private pasajeroservice:PasajerosService) {
-    this.pasajeros=this.pasajeroservice.getPasajeros();
-    console.log(this.pasajeros);
 
-   }
+  }
 
   ngOnInit() {
+    console.log('entro al constructor');
+    this.pasajeroservice.getPasajeros().subscribe(res=>{
+      console.log(res);
+      this.pasajeros=res;
+      console.log(this.pasajeros);
+    },err=>{
+      console.log(err);
+    });
+
   }
 
 }

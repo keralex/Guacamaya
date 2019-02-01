@@ -1,5 +1,5 @@
 const Sequelize = require('sequelize');
-const CustomerModel = require('./models/customer');
+const PasajeroModel = require('./models/pasajero');
 const sequelize = new Sequelize('sakila', 'root', 'password',{
     host: 'localhost',
     dialect: 'mysql',
@@ -11,12 +11,11 @@ const sequelize = new Sequelize('sakila', 'root', 'password',{
       idle: 10000
     }
   });
-  const Customer = CustomerModel(sequelize, Sequelize);
-
+  const Pasajero = PasajeroModel(sequelize,Sequelize);
   sequelize.sync({ force: false })
   .then(() => {
     console.log(`Database & tables created!`)
   });
   module.exports = {
-    Customer
+    Pasajero
   }

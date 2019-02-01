@@ -10,38 +10,40 @@
                       <!-- <div class="form-group col-md-6">
                           <label for="inputEmail4">Vuelo</label>
                           <input type="email" class="form-control" id="inputEmail4" placeholder="vuelo" disabled>
-                        </div>
-                        <div class="form-group col-md-6">
-                          <label for="inputPassword4">Pasaje</label>
-                          <input type="password" class="form-control" id="inputPassword4" placeholder="pasaje" disabled>
                         </div> -->
+                        <div class="form-group col-md-9">
+                          <label>Pasaje</label>
+                          <input type="text" class="form-control" id="pasaje" placeholder="pasaje" name="pasaje" #name="ngModel" [(ngModel)]="selectedPasajeroPasaje">
+                        </div>
+
                       <div class="form-group col-md-4">
                         <label>Nombre</label>
-                        <input  class="form-control"  placeholder="nombre" type="text" id="first_name" name="first_name" #name="ngModel" [(ngModel)]="selectedPasajeroName">
+                        <input  class="form-control"  placeholder="nombre" type="text" id="nombre" name="nombre" #name="ngModel" [(ngModel)]="selectedPasajeroName">
                       </div>
-                      <!-- <div class="form-group col-md-4">
-                          <label>id</label>
-                          <input type="number" class="form-control"  placeholder="id" type="text" id="customer_id" name="customer_id" #name="ngModel" [(ngModel)]="selectedPasajeroid">
-                        </div> -->
-                        <!-- 
+
+                      <div class="form-group col-md-4">
+                          <label>Apellido</label>
+                          <input type="text" class="form-control"  placeholder="apellido" id="apellido" name="apellido" #name="ngModel" [(ngModel)]="selectedPasajeroApellido">
+                        </div>
+                        
                         <div class="form-group col-md-2">
                             <label>Edad</label>
-                            <input type="email" class="form-control" placeholder="edad" disabled>
+                            <input  type="number" class="form-control"  placeholder="edad" id="edad" name="edad" #name="ngModel" [(ngModel)]="selectedPasajeroEdad">
                           </div>
+
                           <div class="form-group col-md-2">
                               <label>sexo</label>
-                              <select class="form-control" disabled>
-                                  <option>mujer</option>
-                                  <option>hombre</option>
-                                  <option>sin definir</option>
+                              <select class="form-control" id="sexo" name="sexo" #name="ngModel" [(ngModel)]="selectedPasajeroSexo">
+                                  <option *ngFor="let sexo of sexos" [value]="sexo">{{sexo}}</option>
                                 </select>
-                            </div> -->
+                            </div>
 
-<!-- 
+
                             <div class="form-group col-md-6">
                               <label>Pasaporte</label>
-                              <input type="email" class="form-control"  placeholder="Pasaporte" disabled>
+                              <input type="text" class="form-control"  placeholder="pasaporte" id="pasaporte" name="pasaporte" #name="ngModel" [(ngModel)]="selectedPasajeroPasaporte">
                             </div>
+<!--                             
                             <div class="form-group col-md-6">
                               <label>Cantidad de equipaje</label>
                               <select class="form-control" disabled>
@@ -52,8 +54,8 @@
                   </div>
                      
                     <div class="botones">
-                        <!-- <button routerLink="compra"  class="btn btn-primary" type="button">Siguiente</button> -->
-                        <button class="btn btn-primary" type="submit">Siguiente</button>
+                        <button routerLink="compra"  class="btn btn-primary" type="button">Comprar</button>
+                        <button class="btn btn-primary" type="submit" >Registrar</button>
                     </div>  
             
                     </form>

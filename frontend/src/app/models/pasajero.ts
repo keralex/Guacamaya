@@ -1,8 +1,15 @@
 export class Pasajero {
-    constructor(customer_id=0, first_name=''){
-        this.customer_id =customer_id;
-        this.first_name=first_name;
+    constructor(nombre=''){
+        this.nombre=nombre;
     }
-    customer_id?:number;
-    first_name?:string;
+    pasajero_id?:number;
+    nombre?:string;
+    apellido?: string;
+    pasaporte?:string;
+    edad?: number;
+    sexo?: string;
+    pasaje?:string;
+
+
+    
 }
