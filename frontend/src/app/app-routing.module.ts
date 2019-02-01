@@ -30,6 +30,8 @@ import { AlquilarAvionComponent } from './components/alquilar-avion/alquilar-avi
 import { RegistroFallasComponent } from './components/registro-fallas/registro-fallas.component';
 import { AsignarMantenimientoComponent } from './components/asignar-mantenimiento/asignar-mantenimiento.component';
 import { AdminVueloComponent } from './navigation/admin-vuelo/admin-vuelo.component';
+import { EliminarPasajeroComponent } from './components/eliminar-pasajero/eliminar-pasajero.component';
+import { ModificarPasajeComponent } from './components/modificar-pasaje/modificar-pasaje.component';
 
 const routes: Routes = [
   // home
@@ -49,7 +51,12 @@ const routes: Routes = [
     {path:'ventaPasaje',component:VentaPasajeComponent},
     {path:'ventaPasaje/registroPasajeros',component:DatosPasajeroComponent},
     {path:'ventaPasaje/registroPasajeros/compra',component:CompraComponent},
-    {path:'pasajes',component:PasajesVendidosComponent}
+    {path:'pasajes',component:PasajesVendidosComponent},
+    {path:'eliminar_pasajero',component:EliminarPasajeroComponent},
+    {path:'modificar_pasajero',component:ModificarPasajeComponent
+  },
+
+    
   ],component:VentaComponent
 
 },

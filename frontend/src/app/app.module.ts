@@ -43,6 +43,8 @@ import { ProveedoresComponent } from './components/proveedores/proveedores.compo
 import { AlquilarAvionComponent } from './components/alquilar-avion/alquilar-avion.component';
 import { RegistroFallasComponent } from './components/registro-fallas/registro-fallas.component';
 import { AsignarMantenimientoComponent } from './components/asignar-mantenimiento/asignar-mantenimiento.component';
+import { ModificarPasajeComponent } from './components/modificar-pasaje/modificar-pasaje.component';
+import { EliminarPasajeroComponent } from './components/eliminar-pasajero/eliminar-pasajero.component';
 
 @NgModule({
   declarations: [
@@ -85,6 +87,8 @@ import { AsignarMantenimientoComponent } from './components/asignar-mantenimient
     AlquilarAvionComponent,
     RegistroFallasComponent,
     AsignarMantenimientoComponent,
+    ModificarPasajeComponent,
+    EliminarPasajeroComponent,
   ],
   imports: [
     BrowserModule,

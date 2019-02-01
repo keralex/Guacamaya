@@ -26,8 +26,6 @@ export class PasajerosService {
 
   
   getPasajeros():Observable<any>{
-    console.log('entro a get pasajeros')
-    console.log(this.http.get<Pasajero>(this.URL_API));
 
     return this.http.get<Pasajero>(this.URL_API);
 
@@ -39,11 +37,15 @@ export class PasajerosService {
   }
   // Actualizar
   putPasajero(pasajero:Pasajero){
-    return this.http.put(this.URL_API+`/${pasajero.pasajero_id}`+'update',pasajero);
+    return this.http.put(this.URL_API+`/${pasajero.pasajero_id}`+'/update',pasajero);
   }
 
   deletePasajero(_id:number){
     return this.http.delete(this.URL_API+`/${_id}`+'/delete');
+  }
+
+  getPasajero(_id:number){
+    return this.http.get<Pasajero>(this.URL_API+`/${_id}`);
   }
 
 }

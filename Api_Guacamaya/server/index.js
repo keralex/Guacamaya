@@ -57,7 +57,7 @@ app.post('/api/pasajeros', (req, res) => {
     console.log("Req",req.body);
     Pasajero.create(req.body)
         .then(pasajero => res.json(pasajero))
-})
+});
 // get all users
 app.get('/api/pasajeros', (req, res) => {
     Pasajero.findAll().then(pasajeros => res.json(pasajeros))
