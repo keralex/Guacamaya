@@ -14,7 +14,7 @@ import { Observable } from 'rxjs';
 export class EliminarPasajeroComponent implements OnInit {
 
   pasajeros:Observable<Pasajero>;
-  selectedPasajero_Id;
+  selectedPasajeroPasaporte;
   
   constructor(private pasajeroservice:PasajerosService) { }
 
@@ -30,12 +30,12 @@ export class EliminarPasajeroComponent implements OnInit {
   }
   changePasajero(event){
     console.log('cambio el pasajero');
-    console.log(this.selectedPasajero_Id);
+    console.log(this.selectedPasajeroPasaporte);
 
   }
   deletePasajero(form:NgForm){
     console.log(form.value);
-    this.pasajeroservice.deletePasajero(this.selectedPasajero_Id).subscribe(res=>{
+    this.pasajeroservice.deletePasajero(this.selectedPasajeroPasaporte).subscribe(res=>{
       console.log('entro al delete');
       console.log(res);
     });    

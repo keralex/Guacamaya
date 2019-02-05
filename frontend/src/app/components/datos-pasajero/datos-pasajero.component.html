@@ -7,14 +7,6 @@
                 <h3>Registro de pasajeros</h3>
                  
                   <div class="form-row">
-                      <!-- <div class="form-group col-md-6">
-                          <label for="inputEmail4">Vuelo</label>
-                          <input type="email" class="form-control" id="inputEmail4" placeholder="vuelo" disabled>
-                        </div> -->
-                        <div class="form-group col-md-9">
-                          <label>Pasaje</label>
-                          <input type="text" class="form-control" id="pasaje" placeholder="pasaje" name="pasaje" #name="ngModel" [(ngModel)]="selectedPasajeroPasaje">
-                        </div>
 
                       <div class="form-group col-md-4">
                         <label>Nombre</label>
@@ -38,24 +30,21 @@
                                 </select>
                             </div>
 
-
                             <div class="form-group col-md-6">
                               <label>Pasaporte</label>
                               <input type="text" class="form-control"  placeholder="pasaporte" id="pasaporte" name="pasaporte" #name="ngModel" [(ngModel)]="selectedPasajeroPasaporte">
                             </div>
-<!--                             
+                            
                             <div class="form-group col-md-6">
                               <label>Cantidad de equipaje</label>
-                              <select class="form-control" disabled>
-                                  <option>1</option>
-                                  <option>2</option>
+                              <select class="form-control" id="maletas" name="cant_maletas" #name="ngModel" [(ngModel)]="selectedPasajeroMaleta">
+                                  <option *ngFor="let maleta of maletas" [value]="maleta">{{maleta}}</option>
                                 </select>
-                            </div> -->
+                            </div>
                   </div>
                      
                     <div class="botones">
-                        <button routerLink="compra"  class="btn btn-primary" type="button">Comprar</button>
-                        <button class="btn btn-primary" type="submit" >Registrar</button>
+                        <button class="btn btn-primary" type="submit">Comprar</button>
                     </div>  
             
                     </form>

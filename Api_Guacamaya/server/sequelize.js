@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
 const PasajeroModel = require('./models/pasajero');
-const sequelize = new Sequelize('sakila', 'root', 'password',{
+const sequelize = new Sequelize('guacamaya', 'root', 'password',{
     host: 'localhost',
     dialect: 'mysql',
     port: '3306',
@@ -11,6 +11,8 @@ const sequelize = new Sequelize('sakila', 'root', 'password',{
       idle: 10000
     }
   });
+
+  //pasajero
   const Pasajero = PasajeroModel(sequelize,Sequelize);
   sequelize.sync({ force: false })
   .then(() => {
@@ -18,4 +20,5 @@ const sequelize = new Sequelize('sakila', 'root', 'password',{
   });
   module.exports = {
     Pasajero
+    
   }

@@ -10,8 +10,8 @@
   
                         <label>Escoge Pasajero</label>
                         
-                        <select class="form-control" id="pasajero" name="pasajero" #name="ngModel" [(ngModel)]="selectedPasajero_Id" (change)="changePasajero($event)">
-                          <option *ngFor="let pasajero of pasajeros" [value]="pasajero.pasajero_id">{{pasajero.pasajero_id}}</option>
+                        <select class="form-control" id="pasajero" name="pasajero" #name="ngModel" [(ngModel)]="selectedPasajeroPasaporte" (change)="changePasajero($event)">
+                          <option *ngFor="let pasajero of pasajeros" [value]="pasajero.pasaporte">{{pasajero.pasaporte}}</option>
                         </select>
                       </div>
                       <div class="botones">

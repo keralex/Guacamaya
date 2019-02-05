@@ -1,16 +1,15 @@
 module.exports = (sequelize, type) => {
     return sequelize.define('pasajero', {
-       pasajero_id: {
-          type: type.INTEGER,
+       pasaporte: {
+          type: type.STRING,
           primaryKey: true,
-          autoIncrement: true
+          autoIncrement: false,
+
         },
        nombre: type.STRING,
        apellido: type.STRING,
-       pasaporte:type.STRING,
        edad: type.INTEGER,
        sexo: type.STRING,
-       pasaje:type.STRING
-
+       cant_maletas:type.INTEGER
     })
 }

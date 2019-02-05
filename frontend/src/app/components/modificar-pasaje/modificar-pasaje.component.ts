@@ -15,13 +15,11 @@ export class ModificarPasajeComponent implements OnInit {
 
 
   pasajeros:Observable<Pasajero>;
-  selectedPasajero_Id;
   selectedPasajeroName:string;
   selectedPasajeroApellido:string;
   selectedPasajeroPasaporte:string;
   selectedPasajeroEdad:number;
   selectedPasajeroSexo:string;
-  selectedPasajeroPasaje:string;
   pasajero:Pasajero;
   cambia:boolean;
   public sexos=['Masculino','Femenino','no definido'];
@@ -50,35 +48,27 @@ export class ModificarPasajeComponent implements OnInit {
   //funciones
 
   changePasajero(event){
-    console.log('cambio el pasajero');
-    console.log(this.selectedPasajero_Id);
+    console.log(this.selectedPasajeroPasaporte);
     
-    this.pasajeroservice.getPasajero(this.selectedPasajero_Id).subscribe(res=>{
+    this.pasajeroservice.getPasajero(this.selectedPasajeroPasaporte).subscribe(res=>{
       console.log(res);
-      this.pasajero=res;
-      console.log(this.pasajero);
-      this.AsignarDatos(this.pasajero);
+      this.AsignarDatos();
 
     });
   }
 
-  AsignarDatos(pasajero:Pasajero){
+  AsignarDatos(){
+    console.log(this.pasajero);
     this.cambia=true;
-    console.log(pasajero);
-    this.pasajero=pasajero;
+
   }
 
   updatePasajero(form:NgForm){
+    console.log('entre al update')
     console.log(form.value);
-    this.pasajero.nombre=this.selectedPasajeroName;
-    this.pasajero.apellido=this.selectedPasajeroApellido;
-    this.pasajero.edad=this.selectedPasajeroEdad;
-    this.pasajero.pasaporte=this.selectedPasajeroPasaporte;
-    this.pasajero.pasaje=this.selectedPasajeroPasaje;
-    this.pasajero.sexo=this.selectedPasajeroSexo;
+    this.pasajero=form.value;
 
-    this.pasajeroservice.putPasajero(this.pasajero).subscribe(res=>{
-      console.log('entro al put');
+    this.pasajeroservice.putPasajero(form.value).subscribe(res=>{
       console.log(res);
     });
 ;

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {PasajerosService} from './../../services/pasajeros.service';
 import { Pasajero } from 'src/app/models/pasajero';
 import {NgForm} from '@angular/forms'
+import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-datos-pasajero',
   templateUrl: './datos-pasajero.component.html',
@@ -14,11 +15,11 @@ export class DatosPasajeroComponent implements OnInit {
   selectedPasajeroPasaporte:string;
   selectedPasajeroEdad:number;
   selectedPasajeroSexo:string;
-  selectedPasajeroPasaje:string;
-
+  selectedPasajeroMaletas:number;
   public sexos=['Masculino','Femenino','no definido'];
+  public maletas=[1,2,3,4]
 
-  constructor(private pasajeroservice:PasajerosService) {
+  constructor(private pasajeroservice:PasajerosService,private router: Router) {
   
    }
 
@@ -31,7 +32,7 @@ export class DatosPasajeroComponent implements OnInit {
     this.pasajeroservice.selectedPasajero.apellido=this.selectedPasajeroApellido;
     this.pasajeroservice.selectedPasajero.edad=this.selectedPasajeroEdad;
     this.pasajeroservice.selectedPasajero.pasaporte=this.selectedPasajeroPasaporte;
-    this.pasajeroservice.selectedPasajero.pasaje=this.selectedPasajeroPasaje;
+    this.pasajeroservice.selectedPasajero.cant_maletas=this.selectedPasajeroMaletas;
     this.pasajeroservice.selectedPasajero.sexo=this.selectedPasajeroSexo;
 
    console.log(this.pasajeroservice.selectedPasajero);
@@ -39,6 +40,8 @@ export class DatosPasajeroComponent implements OnInit {
     this.pasajeroservice.postPasajero(this.pasajeroservice.selectedPasajero).subscribe(res=>{
       console.log('entro al post');
       console.log(res);
+    this.router.navigate(['/ventas/ventaPasaje/registroPasajeros/compra']);
+
     });
 
   

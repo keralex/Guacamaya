@@ -2,7 +2,7 @@ var express = require('express');
 var app=express();
 var mysql=require('mysql2')
 const morgan=require('morgan');
-var catalogRouter = require('./routes/catalog');
+var catalogRouter = require('./routes/pasajeroRoute');
 var config = require('./config/config');
 const bodyParser=require('body-parser');
 const {Customer,Pasajero}= require('./sequelize');
@@ -27,7 +27,7 @@ app.use(cors({origin:'http://localhost:4200'}));
 
 
 //routes
-app.use(require('./routes/catalog'));
+app.use(require('./routes/pasajeroRoute'));
 
 
 //starting the server
@@ -65,7 +65,7 @@ app.get('/api/pasajeros', (req, res) => {
 
 app.get('/query', function (req, res) {
     let response;
-    connection.query('SELECT * FROM sakila.pasajero', function(err, rows, fields) {
+    connection.query('SELECT * FROM guacamaya.pasajero', function(err, rows, fields) {
         if (err) throw err;
         console.log('The solution is: ', rows[0]);
         response = rows[0]
