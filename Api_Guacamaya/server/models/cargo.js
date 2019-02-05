@@ -6,8 +6,14 @@ module.exports = (sequelize, type) => {
           autoIncrement: true,
 
         },
-        nombre:type.STRING,
-        sueldo:type.FLOAT
+        nombre:{
+            type: type.STRING,
+            allowNull: false    
+          },
+        sueldo:{
+            type: type.FLOAT,
+            allowNull: false    
+          }
   
     })
 }

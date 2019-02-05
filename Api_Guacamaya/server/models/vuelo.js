@@ -6,7 +6,10 @@ module.exports = (sequelize, type) => {
           autoIncrement: true,
 
         },
-        duracion_aprox:type.INTEGER
+        duracion_aprox:{
+            type: type.TIME,
+            allowNull: false    
+          }
   
     })
 }

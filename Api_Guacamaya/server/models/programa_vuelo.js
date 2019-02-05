@@ -6,13 +6,27 @@ module.exports = (sequelize, type) => {
           autoIncrement: true,
 
         },
-        origen:type.STRING,
-        destino:type.STRING,
-        fecha_salida:DATEONLY,
-        fecha_llegada:DATEONLY,
-        hora_salida:TIME,
-        hora_llegada:TIME,
-        posee_escala:type.BOOLEAN
+       
+        fecha_salida:{
+            type: type.DATEONLY,
+            allowNull: false    
+          },
+        fecha_llegada:{
+            type: type.DATEONLY,
+            allowNull: false    
+          },
+        hora_salida:{
+            type: type.TIME,
+            allowNull: false    
+          },
+        hora_llegada:{
+            type: type.TIME,
+            allowNull: false    
+          },
+        posee_escala:{
+            type: type.BOOLEAN,
+            allowNull: false    
+          }
   
     })
 }

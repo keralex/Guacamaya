@@ -6,6 +6,9 @@ module.exports = (sequelize, type) => {
           autoIncrement: true,
 
         },
-        distancia:type.FLOAT
+        distancia:{
+            type: type.FLOAT,
+            allowNull: false    
+          }
     })
 }

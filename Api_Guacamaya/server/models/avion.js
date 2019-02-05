@@ -7,27 +7,91 @@ module.exports = (sequelize, type) => {
 
         },
         
-        modelo:type.STRING,
-        fabricante:type.STRING,
-        estado:type.STRING,
-        cant_asientos_VIP:type.INTEGER,
-        cant_asientos_turista:type.INTEGER,
-        peso_vacio:type.FLOAT,
-        peso_max:type.FLOAT,
-        equipaje_max: type.FLOAT,
-        cabina_max:type.INTEGER,
-        combustible_tipo:type.STRING,
-        combustible_cant:type.FLOAT,
-        dist_despegue:type.FLOAT,
-        dist_aterrizaje:type.FLOAT,
-        velocidad_max:type.FLOAT,
-        velocidad_crucero:type.FLOAT,
-        cant_banos:type.INTEGER,
-        cant_salidas_Emergencia:type.INTEGER,
-        asiento_tipo:type.STRING,
-        internet:type.BOOLEAN,
-        television:type.BOOLEAN,
-        avion_alquilado:type.BOOLEAN
+        modelo: {
+            type: type.STRING,
+            allowNull: false    
+          },
+        fabricante: {
+            type: type.STRING,
+            allowNull: false    
+          },
+        estado: {
+            type: type.STRING,
+            allowNull: false    
+          },
+        cant_asientos_VIP:
+        {
+            type:type.INTEGER,
+            allowNull: false    
+          },
+        cant_asientos_turista: {
+            type:type.INTEGER,
+            allowNull: false    
+          },
+        peso_vacio:{
+            type: type.FLOAT,
+            allowNull: false    
+          },
+        peso_max:{
+            type: type.FLOAT,
+            allowNull: false    
+          },
+        equipaje_max: {
+            type: type.FLOAT,
+            allowNull: false    
+          },
+        cabina_max: {
+            type:type.INTEGER,
+            allowNull: false    
+          },
+        combustible_tipo:{
+            type: type.STRING,
+            allowNull: false    
+          },
+        combustible_cant:{
+            type: type.FLOAT,
+            allowNull: false    
+          },
+        dist_despegue:{
+            type: type.FLOAT,
+            allowNull: false    
+          },
+        dist_aterrizaje:{
+            type: type.FLOAT,
+            allowNull: false    
+          },
+        velocidad_max:{
+            type: type.FLOAT,
+            allowNull: false    
+          },
+        velocidad_crucero:{
+            type: type.FLOAT,
+            allowNull: false    
+          },
+        cant_banos: {
+            type:type.INTEGER,
+            allowNull: false    
+          },
+        cant_salidas_Emergencia: {
+            type:type.INTEGER,
+            allowNull: false    
+          },
+        asiento_tipo: {
+            type: type.STRING,
+            allowNull: false    
+          },
+        internet:{
+            type: type.BOOLEAN,
+            allowNull: false    
+          },
+        television:{
+            type: type.BOOLEAN,
+            allowNull: false    
+          },
+        avion_alquilado:{
+            type: type.BOOLEAN,
+            allowNull: false    
+          }
 
 
 

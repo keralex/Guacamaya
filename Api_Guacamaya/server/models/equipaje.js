@@ -6,8 +6,14 @@ module.exports = (sequelize, type) => {
           autoIncrement: true,
 
         },
-        peso_kg:type.FLOAT,
-        tipo:type.STRING
+        peso_kg:{
+            type: type.FLOAT,
+            allowNull: false    
+          },
+        tipo:{
+            type: type.STRING,
+            allowNull: false    
+          }
 
 
 

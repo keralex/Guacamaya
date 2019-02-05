@@ -6,9 +6,18 @@ module.exports = (sequelize, type) => {
           autoIncrement: true,
 
         },
-       num_asiento:type.INTEGER,
-       tipo:type.INTEGER,
-       ubicacion:type.INTEGER
+       num_asiento:{
+         type: type.INTEGER,
+         allowNull: false    
+       },
+       tipo:{
+         type: type.STRING,
+         allowNull: false    
+       },
+       ubicacion:{
+         type: type.STRING,
+         allowNull: false    
+       }
 
   
     })

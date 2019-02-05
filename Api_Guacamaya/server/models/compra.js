@@ -6,7 +6,10 @@ module.exports = (sequelize, type) => {
           autoIncrement: true,
 
         },
-        total:type.FLOAT
+        total:{
+            type: type.FLOAT,
+            allowNull: false    
+          }
   
     })
 }

@@ -5,7 +5,6 @@ var router = express.Router();
 var pasajero_controller = require('../controllers/pasajeroController');
 
 
-
 //pasajeros routes////////////
 
 // POST request for creating pasajero.

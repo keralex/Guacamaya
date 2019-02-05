@@ -6,8 +6,14 @@ module.exports = (sequelize, type) => {
           autoIncrement: true,
 
         },
-        duracion:type.TIME,
-        tipo:type.STRING
+        duracion:{
+            type: type.TIME,
+            allowNull: false    
+          },
+        tipo:{
+            type: type.STRING,
+            allowNull: false    
+          }
   
     })
 }

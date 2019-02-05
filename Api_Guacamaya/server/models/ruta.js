@@ -6,8 +6,14 @@ module.exports = (sequelize, type) => {
           autoIncrement: true,
 
         },
-        precio_base:type.FLOAT,
-        distancia:type.FLOAT
+        precio_base:{
+            type: type.FLOAT,
+            allowNull: false    
+          },
+        distancia:{
+            type: type.FLOAT,
+            allowNull: false    
+          } 
   
     })
 }

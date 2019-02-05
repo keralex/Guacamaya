@@ -4,9 +4,15 @@ module.exports = (sequelize, type) => {
           type: type.INTEGER,
           primaryKey: true,
           autoIncrement: false,
+          allowNull:false
         },
-        pais:type.STRING,
-        ciudad:type.STRING
-        
+        pais: {
+            type: type.STRING,
+            allowNull: false    
+          },
+        ciudad:{
+            type: type.STRING,
+            allowNull: false    
+          }
     })
 }

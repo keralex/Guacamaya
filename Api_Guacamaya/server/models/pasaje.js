@@ -6,8 +6,14 @@ module.exports = (sequelize, type) => {
           autoIncrement: true,
 
         },
-       precio_total: type.FLOAT,
-       categoria: type.STRING,
+       precio_total: {
+         type: type.FLOAT,
+         allowNull: false    
+       },
+       categoria:{
+         type: type.STRING,
+         allowNull: false    
+       },
   
     })
 }

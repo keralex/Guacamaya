@@ -4,12 +4,28 @@ module.exports = (sequelize, type) => {
           type: type.STRING,
           primaryKey: true,
           autoIncrement: false,
+          allowNull:false
 
         },
-       nombre: type.STRING,
-       apellido: type.STRING,
-       edad: type.INTEGER,
-       sexo: type.STRING,
-       cant_maletas:type.INTEGER
+       nombre: {
+         type: type.STRING,
+         allowNull: false    
+       },
+       apellido: {
+         type: type.STRING,
+         allowNull: false    
+       },
+       edad: {
+         type:type.INTEGER,
+         allowNull: false    
+       },
+       sexo: {
+         type: type.STRING,
+         allowNull: false    
+       },
+       cant_maletas:{
+         type:type.INTEGER,
+         allowNull: false    
+       }
     })
 }

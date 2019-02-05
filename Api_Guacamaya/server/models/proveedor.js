@@ -7,8 +7,14 @@ module.exports = (sequelize, type) => {
 
         },
         nombre:type.STRING,
-        tiempo_respuesta:type.TIME,
-        precio_x_distancia:type.FLOAT
+        tiempo_respuesta:{
+            type: type.TIME,
+            allowNull: false    
+          },
+        precio_x_distancia:{
+            type: type.FLOAT,
+            allowNull: false    
+          }
   
     })
 }
