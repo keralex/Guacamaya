@@ -39,7 +39,7 @@ export class DatosPasajeroComponent implements OnInit {
   
     this.pasajeroservice.postPasajero(this.pasajeroservice.selectedPasajero).subscribe(res=>{
       console.log('entro al post');
-      console.log(res);
+      console.log(res); 
     this.router.navigate(['/ventas/ventaPasaje/registroPasajeros/compra']);
 
     });

@@ -37,7 +37,7 @@
                             
                             <div class="form-group col-md-6">
                               <label>Cantidad de equipaje</label>
-                              <select class="form-control" id="maletas" name="cant_maletas" #name="ngModel" [(ngModel)]="selectedPasajeroMaleta">
+                              <select class="form-control" id="maletas" name="cant_maletas" #name="ngModel" [(ngModel)]="selectedPasajeroMaletas">
                                   <option *ngFor="let maleta of maletas" [value]="maleta">{{maleta}}</option>
                                 </select>
                             </div>
