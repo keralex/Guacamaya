@@ -1,5 +1,6 @@
+'use strict';
 module.exports = (sequelize, type) => {
-    return sequelize.define('pasaje', {
+    var pasaje=sequelize.define('pasaje', {
        id: {
           type: type.INTEGER,
           primaryKey: true,
@@ -14,6 +15,18 @@ module.exports = (sequelize, type) => {
          type: type.STRING,
          allowNull: false    
        },
+       programa_vuelo_id:{
+         type:type.INTEGER,
+         allowNull:false
+       }
   
-    })
-}
+
+    },{});
+    pasaje.associate=function(models){
+     models.pasaje.belongsTo(models.programa_vuelo,{
+          foreignKey:'programa_vuelo_id',
+          targetKey:'id'
+      })
+    };  
+    return pasaje;
+};
