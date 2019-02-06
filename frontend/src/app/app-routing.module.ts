@@ -34,6 +34,8 @@ import { EliminarPasajeroComponent } from './components/eliminar-pasajero/elimin
 import { ModificarPasajeComponent } from './components/modificar-pasaje/modificar-pasaje.component';
 import { ProgramasVueloComponent } from './components/programas-vuelo/programas-vuelo.component';
 import { GenerarProgramaVueloComponent } from './components/generar-programa-vuelo/generar-programa-vuelo.component';
+import { EliminarProgramaVueloComponent } from './components/eliminar-programa-vuelo/eliminar-programa-vuelo.component';
+import { ModificarProgramaVueloComponent } from './components/modificar-programa-vuelo/modificar-programa-vuelo.component';
 
 const routes: Routes = [
   // home
@@ -101,6 +103,11 @@ children:[
   {path:'asignar_mantenimiento',component:AsignarMantenimientoComponent},
   {path:'programa_vuelos', component:ProgramasVueloComponent},
   {path:'generar_programa', component:GenerarProgramaVueloComponent},
+  {path:'eliminar_programa', component:EliminarProgramaVueloComponent},
+  {path:'modificar_programa', component:ModificarProgramaVueloComponent},
+  
+
+
   
 ],component:AdminVueloComponent
 },

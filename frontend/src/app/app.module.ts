@@ -47,6 +47,8 @@ import { ModificarPasajeComponent } from './components/modificar-pasaje/modifica
 import { EliminarPasajeroComponent } from './components/eliminar-pasajero/eliminar-pasajero.component';
 import { ProgramasVueloComponent } from './components/programas-vuelo/programas-vuelo.component';
 import { GenerarProgramaVueloComponent } from './components/generar-programa-vuelo/generar-programa-vuelo.component';
+import { EliminarProgramaVueloComponent } from './components/eliminar-programa-vuelo/eliminar-programa-vuelo.component';
+import { ModificarProgramaVueloComponent } from './components/modificar-programa-vuelo/modificar-programa-vuelo.component';
 
 @NgModule({
   declarations: [
@@ -93,6 +95,8 @@ import { GenerarProgramaVueloComponent } from './components/generar-programa-vue
     EliminarPasajeroComponent,
     ProgramasVueloComponent,
     GenerarProgramaVueloComponent,
+    EliminarProgramaVueloComponent,
+    ModificarProgramaVueloComponent,
   ],
   imports: [
     BrowserModule,
