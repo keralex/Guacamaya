@@ -45,6 +45,8 @@ import { RegistroFallasComponent } from './components/registro-fallas/registro-f
 import { AsignarMantenimientoComponent } from './components/asignar-mantenimiento/asignar-mantenimiento.component';
 import { ModificarPasajeComponent } from './components/modificar-pasaje/modificar-pasaje.component';
 import { EliminarPasajeroComponent } from './components/eliminar-pasajero/eliminar-pasajero.component';
+import { ProgramasVueloComponent } from './components/programas-vuelo/programas-vuelo.component';
+import { GenerarProgramaVueloComponent } from './components/generar-programa-vuelo/generar-programa-vuelo.component';
 
 @NgModule({
   declarations: [
@@ -89,6 +91,8 @@ import { EliminarPasajeroComponent } from './components/eliminar-pasajero/elimin
     AsignarMantenimientoComponent,
     ModificarPasajeComponent,
     EliminarPasajeroComponent,
+    ProgramasVueloComponent,
+    GenerarProgramaVueloComponent,
   ],
   imports: [
     BrowserModule,
