@@ -4,43 +4,51 @@
 
       <div class="col-lg-8">
           <div class="container box shadow-lg p-3 mb-5 bg-white rounded">
-              <form #pasajeroForm="ngForm" (ngSubmit)="addPasajero(pasajeroForm)">
+              <form #programaForm="ngForm" (ngSubmit)="addPrograma(programaForm)">
                 <h3>Generar Programa de vuelo</h3>
                  
                   <div class="form-row">
 
-                      <div class="form-group col-md-4">
-                        <label></label>
-                        <input  class="form-control"  placeholder="nombre" type="text" id="nombre" name="nombre" #name="ngModel" [(ngModel)]="selectedPasajeroName">
+                      <div class="form-group col-md-6">
+                        <label>Origen</label>
+                        <input  class="form-control"  placeholder="Origen" type="text" id="origen" name="origen" #name="ngModel" [(ngModel)]="ProgramaOrigen">
                       </div>
 
-                      <div class="form-group col-md-4">
-                          <label>Apellido</label>
-                          <input type="text" class="form-control"  placeholder="apellido" id="apellido" name="apellido" #name="ngModel" [(ngModel)]="selectedPasajeroApellido">
+                      <div class="form-group col-md-6">
+                          <label>Destino</label>
+                          <input type="text" class="form-control"  placeholder="Destino" id="destino" name="destino" #name="ngModel" [(ngModel)]="ProgramaDestino">
                         </div>
                         
-                        <div class="form-group col-md-2">
-                            <label>Edad</label>
-                            <input  type="number" class="form-control"  placeholder="edad" id="edad" name="edad" #name="ngModel" [(ngModel)]="selectedPasajeroEdad">
+
+                        <div class="form-group col-md-6">
+                            <label for="example-date-input" class="col-form-label">Fecha Salida</label>
+                              <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+                        </div>
+                 
+                        
+                        <div class="form-group col-md-6">
+                            <label for="example-time-input" class="col-form-label">Hora Salida</label>
+                              <input class="form-control" type="time" value="13:45:00" id="example-time-input">
                           </div>
 
-                          <div class="form-group col-md-2">
-                              <label>sexo</label>
-                              <select class="form-control" id="sexo" name="sexo" #name="ngModel" [(ngModel)]="selectedPasajeroSexo">
-                                  <option *ngFor="let sexo of sexos" [value]="sexo">{{sexo}}</option>
-                                </select>
+                          
+                          <div class="form-group col-md-6">
+                              <label for="example-date-input" class=" col-form-label">Fecha Llegada</label>
+                                <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+                          </div>
+                          <div class="form-group col-md-6">
+                              <label for="example-time-input" class=" col-form-label">Hora Llegada</label>
+                                <input class="form-control" type="time" value="13:45:00" id="example-time-input">
                             </div>
-
-                            <div class="form-group col-md-6">
-                              <label>Pasaporte</label>
-                              <input type="text" class="form-control"  placeholder="pasaporte" id="pasaporte" name="pasaporte" #name="ngModel" [(ngModel)]="selectedPasajeroPasaporte">
-                            </div>
-                            
-                            <div class="form-group col-md-6">
-                              <label>Cantidad de equipaje</label>
-                              <select class="form-control" id="maletas" name="cant_maletas" #name="ngModel" [(ngModel)]="selectedPasajeroMaletas">
-                                  <option *ngFor="let maleta of maletas" [value]="maleta">{{maleta}}</option>
-                                </select>
+  
+  
+                            <div class="form-group col-md-5">
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <label class="form-check-label" for="gridCheck">
+                                  Tiene Escala
+                                </label>
+                              </div>
                             </div>
                   </div>
                      
@@ -51,15 +59,7 @@
                     </form>
 
                     <form class="form-inline">
-                      <div class="form-group">
-                        <div class="input-group">
-                          <input class="form-control" placeholder="yyyy-mm-dd"
-                                 name="dp" [(ngModel)]="model" ngbDatepicker #d="ngbDatepicker">
-                          <div class="input-group-append">
-                            <button class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button">dates</button>
-                          </div>
-                        </div>
-                      </div>
+                    
                     </form>
                     
                     <hr/>

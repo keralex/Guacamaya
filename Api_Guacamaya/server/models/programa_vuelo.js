@@ -26,6 +26,15 @@ module.exports = (sequelize, type) => {
         posee_escala:{
             type: type.BOOLEAN,
             allowNull: false    
+          },
+
+          origen:{
+            type:type.STRING,
+            allowNull:false
+          },
+          destino:{
+            type:type.STRING,
+            allowNull:false
           }
   
     })
