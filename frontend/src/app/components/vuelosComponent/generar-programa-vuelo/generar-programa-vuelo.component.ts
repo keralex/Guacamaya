@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {NgbDateStruct, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-generar-programa-vuelo',
@@ -6,10 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./generar-programa-vuelo.component.css']
 })
 export class GenerarProgramaVueloComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  model: NgbDateStruct;
+  var1:string;
+  constructor(private calendar: NgbCalendar) { 
+    
   }
+  ngOnInit() {
+    
+  }
+  
+  addPasajero(form:NgForm){
+    this.var1="0"+this.model.month.toString()+"0"+this.model.day.toString();
+   console.log(this.var1);
+
+  
+
+  }
+
+
 
 }
