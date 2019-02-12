@@ -22,16 +22,16 @@ export class GenerarProgramaVueloComponent implements OnInit {
 
   constructor(private calendar: NgbCalendar) { 
     
+    
   }
   ngOnInit() {
-    
+    this.ProgramaEscala=false;
   }
   
   addPrograma(form:NgForm){
-    
-    this.var1="0"+this.model.month.toString()+"0"+this.model.day.toString();
-   console.log(this.var1);
-
+    console.log(this.ProgramaEscala);
+    console.log('entro al add');
+   console.log(form);
   }
 
 

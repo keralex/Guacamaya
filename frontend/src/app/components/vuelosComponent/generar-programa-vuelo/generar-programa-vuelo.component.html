@@ -22,45 +22,43 @@
 
                         <div class="form-group col-md-6">
                             <label for="example-date-input" class="col-form-label">Fecha Salida</label>
-                              <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+                              <input class="form-control" type="date" value="2011-08-19" id="fecha_salida" name="fecha_salida" #name="ngModel" [(ngModel)]="ProgramaFechaS">
                         </div>
                  
                         
                         <div class="form-group col-md-6">
                             <label for="example-time-input" class="col-form-label">Hora Salida</label>
-                              <input class="form-control" type="time" value="13:45:00" id="example-time-input">
+                              <input class="form-control" type="time" value="13:45:00" step="1" id="hora_salida" name="hora_salida" #name="ngModel" [(ngModel)]="ProgramaHoraS">
                           </div>
 
                           
                           <div class="form-group col-md-6">
                               <label for="example-date-input" class=" col-form-label">Fecha Llegada</label>
-                                <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+                                <input class="form-control" type="date" value="2011-08-19" id="fecha_llegada" name="fecha_llegada" #name="ngModel" [(ngModel)]=" ProgramaFechaL">
                           </div>
                           <div class="form-group col-md-6">
                               <label for="example-time-input" class=" col-form-label">Hora Llegada</label>
-                                <input class="form-control" type="time" value="13:45:00" id="example-time-input">
+                                <input class="form-control" type="time" value="13:45:00" step="1" id="hora_llegada" name="hora_llegada" #name="ngModel" [(ngModel)]="ProgramaHoraL">
                             </div>
   
   
                             <div class="form-group col-md-5">
                               <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="gridCheck">
+                                <input class="form-check-input" type="checkbox" id="posee_escala" value="true" name="posee_escala" #name='ngModel' [(ngModel)]="ProgramaEscala">
                                 <label class="form-check-label" for="gridCheck">
                                   Tiene Escala
                                 </label>
                               </div>
                             </div>
                   </div>
-                     
-                    <div class="botones">
-                        <button class="btn btn-primary" type="submit">Comprar</button>
-                    </div>  
+                    
+                  <div class="botones">
+                    <button class="btn btn-primary" type="submit">Generar</button>
+                </div>  
+           
             
                     </form>
-
-                    <form class="form-inline">
-                    
-                    </form>
+                 
                     
                     <hr/>
                    
