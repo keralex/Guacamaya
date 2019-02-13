@@ -49,6 +49,7 @@ import { EliminarProgramaVueloComponent } from './components/vuelosComponent/eli
 import { ModificarProgramaVueloComponent } from './components/vuelosComponent/modificar-programa-vuelo/modificar-programa-vuelo.component';
 import { RegistrarPasajeroComponent } from './components/check_in/registrar-pasajero/registrar-pasajero.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { ProgramaVueloService } from './services/programa-vuelo.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -103,7 +104,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     HttpClientModule,
     NgbModule
   ],
-  providers: [PasajerosService],
+  providers: [PasajerosService,ProgramaVueloService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

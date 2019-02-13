@@ -7,22 +7,22 @@ module.exports = (sequelize, type) => {
 
         },
        
-        fecha_salida:{
-            type: type.DATEONLY,
-            allowNull: false    
-          },
-        fecha_llegada:{
-            type: type.DATEONLY,
-            allowNull: false    
-          },
-        hora_salida:{
-            type: type.TIME,
-            allowNull: false    
-          },
-        hora_llegada:{
-            type: type.TIME,
-            allowNull: false    
-          },
+        // fecha_salida:{
+        //     type: type.DATEONLY,
+        //     allowNull: false    
+        //   },
+        // fecha_llegada:{
+        //     type: type.DATEONLY,
+        //     allowNull: false    
+        //   },
+        // hora_salida:{
+        //     type: type.TIME,
+        //     allowNull: false    
+        //   },
+        // hora_llegada:{
+        //     type: type.TIME,
+        //     allowNull: false    
+        //   },
         posee_escala:{
             type: type.BOOLEAN,
             allowNull: false    

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import {Pasajero} from './../models/pasajero';
 import { Observable } from 'rxjs';
-import { catchError, tap, map } from 'rxjs/operators';
+// import { catchError, tap, map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
