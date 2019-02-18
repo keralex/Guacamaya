@@ -1,0 +1,62 @@
+<div class="container-fluid">
+  <div class="row justify-content-md-center">
+   
+    <div class="col-lg-8">
+        <div class="container box shadow-lg p-3 mb-5 bg-white rounded">
+            <form #pasajeroForm="ngForm" (ngSubmit)="updatePasajero(pasajeroForm)">
+              <h3>Modificar Pasajero</h3>
+               <div class="form-row">
+                  <div class="form-group col-md-9">
+
+                      <label>Escoge Pasajero</label>
+                      
+                      <select class="form-control" id="pasaporte" name="pasaporte" #name="ngModel" [(ngModel)]="selectedPasajeroPasaporte" (change)="changePasajero($event)">
+                        <option *ngFor="let pasajero of pasajeros" [value]="pasajero.pasaporte">{{pasajero.pasaporte}}</option>
+                      </select>
+                    </div>
+               </div>
+                <div class="form-row" *ngIf="cambia">
+             
+                 
+
+          
+                    <div class="form-group col-md-4" >
+                      <label>Nombre</label>
+                      <input   class="form-control"  placeholder="nombre" type="text" id="nombre" name="nombre" #name="ngModel" [(ngModel)]="selectedPasajeroName" >
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <label>Apellido</label>
+                        <input type="text" class="form-control"  placeholder="apellido" id="apellido" name="apellido" #name="ngModel" [(ngModel)]="selectedPasajeroApellido">
+                      </div>
+                      
+                      <div class="form-group col-md-2">
+                          <label>Edad</label>
+                          <input  type="number" class="form-control"  placeholder="edad" id="edad" name="edad" #name="ngModel" [(ngModel)]="selectedPasajeroEdad">
+                        </div>
+
+                        <div class="form-group col-md-2">
+                            <label>sexo</label>
+                            <select class="form-control" id="sexo" name="sexo" #name="ngModel" [(ngModel)]="selectedPasajeroSexo">
+                                <option *ngFor="let sexo of sexos" [value]="sexo">{{sexo}}</option>
+                              </select>
+                          </div>
+
+
+                          <div class="form-group col-md-6">
+                            <label>Pasaporte</label>
+                            <input type="text" class="form-control"  placeholder="pasaporte" id="pasaporte" name="pasaporte" #name="ngModel" [(ngModel)]="selectedPasajeroPasaporte">
+                          </div>
+                          
+                </div>
+                   
+                  <div class="botones">
+                      <button class="btn btn-primary" type="submit" >Registrar</button>
+          </div>
+                  </form>
+                
+        </div>
+    </div>
+   
+  </div>
+</div>

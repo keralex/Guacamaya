@@ -6,30 +6,85 @@
 </button>
 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
   <div class="navbar-nav">
-      <li class="nav-item">
-          <a class="nav-link" routerLink="planificar">Planificar</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="registrar_avion">Registrar Avion</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="asignar_ruta">Asignar Ruta</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="modificar_estado_avion">Modificar Estado de los Aviones</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="proveedores">Lista Proveedores</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="alquilar_avion">Alquilar Avion</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="registro_fallas">Registro Fallas</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="asignar_mantenimiento">Asignar Tipo de Mantenimiento</a>
-        </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Vuelos
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" routerLink="planificar">Generar Vuelo</a>
+                <a class="dropdown-item" href="#">Eliminar Vuelo</a>
+                <a class="dropdown-item" href="#">Modificar Vuelo</a>
+                <a class="dropdown-item" href="#">Lista Vuelos</a>
+                <a class="dropdown-item" routerLink="generar_programa">Generar programa de Vuelos</a>
+                <a class="dropdown-item" href="#">Eliminar programa de Vuelos</a>
+                <a class="dropdown-item" href="#">Modificar programas de Vuelos</a>
+                <a class="dropdown-item" href="#">Lista de programas Vuelos</a>
+
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Aviones
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Registrar Avion</a>
+                  <a class="dropdown-item" href="#">Eliminar Avion</a>
+                  <a class="dropdown-item" href="#">Modificar Avion</a>
+                  <a class="dropdown-item" href="#">Lista Aviones</a>
+                  <a class="dropdown-item" href="#">Modificar Estado</a>
+
+                  
+
+                  <a class="dropdown-item" routerLink="modificar_estado_avion">Modificar Estado</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Rutas
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Registrar Rutas</a>
+                    <a class="dropdown-item" href="#">Eliminar Ruta</a>
+                    <a class="dropdown-item" href="#">Modificar Ruta</a>
+                    <a class="dropdown-item" href="#">Lista de Rutas</a>
+                  </div>
+                    
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Vuelos Charter
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" routerLink="alquilar_avion">Registrar Avion Alquilado</a>
+                      <a class="dropdown-item" href="#">Eliminar Avion Alquilado</a>
+                      <a class="dropdown-item" href="#">Modificar Avion Alquilado</a>
+                      <a class="dropdown-item" href="#">Ver Aviones Alquilados</a>
+                      <a class="dropdown-item" href="#">Registrar Proveedor</a>
+                      <a class="dropdown-item" href="#">Eliminar Proveedor</a>
+                      <a class="dropdown-item" href="#">Modificar Proveedor</a>
+                      <a class="dropdown-item" routerLink="proveedores">Lista de Proveedores</a>
+                    </div>
+                    </li>
+      <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Mantenimiento
+                    </a>
+                    
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" routerLink="registro_fallas" >Registrar Falla</a>
+                      <a class="dropdown-item" href="#">Registrar Mantenimiento</a>
+                      <a class="dropdown-item" href="#">Asignar Mantenimiento</a>
+                      <a class="dropdown-item" href="#">Eliminar Mantenimiento</a>
+                      <a class="dropdown-item" href="#">Modificar Mantenimiento</a>
+                      <a class="dropdown-item" href="#">Ver Aviones en mantenimiento</a>
+                      <a class="dropdown-item" href="#">Cambiar el statu</a>
+                      <a class="dropdown-item" href="#">Lista de Mantenimientos</a>
+                    </div>
+                    </li>
+
+
+
   </div>
 </div>
 </nav>

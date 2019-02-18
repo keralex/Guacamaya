@@ -1,0 +1,34 @@
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+     
+      <div class="col-lg-8">
+          <div class="container box shadow-lg p-3 mb-5 bg-white rounded">
+              <form #pasajeroForm="ngForm" (ngSubmit)="deletePasajero(pasajeroForm)">
+                <h3>Eliminar Pasajero</h3>
+                 <div class="form-row">
+                    <div class="form-group col-md-9">
+  
+                        <label>Escoge Pasajero</label>
+                        
+                        <select class="form-control" id="pasajero" name="pasajero" #name="ngModel" [(ngModel)]="selectedPasajeroPasaporte" (change)="changePasajero($event)">
+                          <option *ngFor="let pasajero of pasajeros" [value]="pasajero.pasaporte">{{pasajero.pasaporte}}</option>
+                        </select>
+                      </div>
+                      <div class="botones">
+                          <button class="btn btn-primary" type="submit" >eliminar</button>
+              </div>
+                 </div>
+               
+                   
+  
+            
+             
+                     
+               
+                    </form>
+                  
+          </div>
+      </div>
+     
+    </div>
+  </div>

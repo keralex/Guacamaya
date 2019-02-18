@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpErrorResponse} from '@angular/common/http';
 import {Pasajero} from './../models/pasajero';
 import { Observable } from 'rxjs';
-import { catchError, tap, map } from 'rxjs/operators';
+// import { catchError, tap, map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class PasajerosService {
   
 
   
-  URL_API ='http://localhost:3002/catalog/pasajero';
+  URL_API ='http://localhost:3002/pasajero';
 
 
 
@@ -36,16 +36,16 @@ export class PasajerosService {
     return this.http.post<Pasajero>(this.URL_API+'/create', pasajero);
   }
   // Actualizar
-  putPasajero(pasajero:Pasajero){
-    return this.http.put(this.URL_API+`/${pasajero.pasajero_id}`+'/update',pasajero);
+  putPasajero(pasajero:Pasajero):Observable<Pasajero>{
+    return this.http.post<Pasajero>(this.URL_API+`/${pasajero.pasaporte}`+'/update',pasajero);
   }
 
-  deletePasajero(_id:number){
-    return this.http.delete(this.URL_API+`/${_id}`+'/delete');
+  deletePasajero(pasaporte:string){
+    return this.http.post(this.URL_API+`/${pasaporte}`+'/delete', {});
   }
 
-  getPasajero(_id:number){
-    return this.http.get<Pasajero>(this.URL_API+`/${_id}`);
+  getPasajero(pasaporte:string):Observable<Pasajero>{
+    return this.http.get<Pasajero>(this.URL_API+`/${pasaporte}`);
   }
 
 }
