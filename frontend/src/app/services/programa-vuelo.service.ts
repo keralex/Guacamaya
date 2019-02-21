@@ -12,7 +12,7 @@ export class ProgramaVueloService {
 
   constructor(private http:HttpClient) { }
 
-  getPrograma_vuelo():Observable<any>{
+  getPrograma_vuelos():Observable<any>{
 
     return this.http.get<ProgramaVuelo>(this.URL_API);
 
@@ -32,7 +32,7 @@ export class ProgramaVueloService {
     return this.http.post(this.URL_API+`/${id}`+'/delete', {});
   }
 
-  getPrograma_vuelos(id:number):Observable<ProgramaVuelo>{
+  getPrograma_vuelo(id:number):Observable<ProgramaVuelo>{
     return this.http.get<ProgramaVuelo>(this.URL_API+`/${id}`);
   }
 

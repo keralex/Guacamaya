@@ -1,3 +1,43 @@
-<p>
-  programas-vuelo works!
-</p>
+<div class="container-fluid">
+  <div class="row justify-content-md-center">
+   
+
+    <div class="col-lg-8">
+        <div class="container box shadow-lg p-3 mb-5 bg-white rounded">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Origen</th>
+                <th scope="col">Destino</th>
+                <th scope="col">Fecha Salida</th>
+                <th scope="col">Hora Salida</th>
+                <th scope="col">Fecha Llegada</th>
+                <th scope="col">Hora de Llegada</th>
+
+              </tr>
+            </thead>
+            <tbody>
+      
+              <tr *ngFor="let programa of programaVuelos">
+                <th>{{programa.origen}}</th>
+                <th>{{programa.destino}}</th>
+                <th>{{programa.fecha_salida}}</th>
+                <th>{{programa.hora_salida}}</th>
+                <th>{{programa.fecha_llegada}}</th>
+                <th>{{programa.hora_llegada}}</th>
+
+
+          
+              </tr>
+            </tbody>
+          </table>
+               
+                  
+             
+
+                
+        </div>
+    </div>
+   
+  </div>
+</div>

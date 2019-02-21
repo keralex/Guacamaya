@@ -24,9 +24,9 @@ router.get('/pasajero', pasajero_controller.pasajero_list);
 // POST request for creating programa_vuelo.
 router.post('/programa_vuelo/create', programa_vuelo_controller.programa_vuelo_create_post);
 // POST request to delete programa_vuelo.
-router.delete('/programa_vuelo/:id/delete', programa_vuelo_controller.programa_vuelo_delete_post);
+router.post('/programa_vuelo/:id/delete', programa_vuelo_controller.programa_vuelo_delete_post);
 // POST request to update programa_vuelo.
-router.put('/programa_vuelo/:id/update', programa_vuelo_controller.programa_vuelo_update_post);
+router.post('/programa_vuelo/:id/update', programa_vuelo_controller.programa_vuelo_update_post);
 // GET request for one programa_vuelo.
 router.get('/programa_vuelo/:id', programa_vuelo_controller.programa_vuelo_detail);
 // GET request for list of all customers.

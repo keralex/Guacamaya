@@ -1,3 +1,22 @@
-<p>
-  eliminar-programa-vuelo works!
-</p>
+<div class="container-fluid">
+  <div class="row justify-content-md-center">
+   
+    <div class="col-lg-8">
+        <div class="container box shadow-lg p-3 mb-5 bg-white rounded">
+            <form #programaForm="ngForm" (ngSubmit)="deletePrograma(programaForm)">
+              <h3>Eliminar Programa de Vuelo</h3>
+               <div class="form-row">
+                  <div class="form-group col-md-9">
+
+                      <label>Escoge Programa</label>
+                      
+                      <select class="form-control" id="pasajero" name="pasajero" #name="ngModel" [(ngModel)]="selectedPrograma" (change)="changePrograma($event)">
+                        <option *ngFor="let programa of programaVuelos" [value]="programa.id">{{programa.id}}</option>
+                      </select>
+                    </div>
+                    <div class="botones">
+                        <button class="btn btn-primary" type="submit" >eliminar</button>
+            </div>
+               </div>
+             
+                 

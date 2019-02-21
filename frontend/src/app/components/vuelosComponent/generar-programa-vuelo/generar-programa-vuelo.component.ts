@@ -38,8 +38,10 @@ export class GenerarProgramaVueloComponent implements OnInit {
     this.programavueloservice.postPrograma_vuelo(form.value).subscribe(res=>{
       console.log('entro al post');
       console.log(res);
+      form.reset();
 
     });
+
 
   }
 

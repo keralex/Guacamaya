@@ -4,10 +4,10 @@ export class ProgramaVuelo {
     id?:number;
     posee_escala:boolean;
 
-    // fecha_salida?:Date;
-    // fecha_llegada?:Date;
-    // hora_salida?;
-    // hora_llegada?;
+    fecha_salida?:Date;
+    fecha_llegada?:Date;
+    hora_salida?;
+    hora_llegada?;
     origen:string;
     destino:string;
 
