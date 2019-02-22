@@ -13,8 +13,7 @@ import {ProgramaVuelo} from './../../../models/programa-vuelo'
   providers:[ProgramaVueloService]
 })
 export class GenerarProgramaVueloComponent implements OnInit {
-  model: NgbDateStruct;
-  time = {hour: 13, minute: 30};
+ 
   var1:string;
   ProgramaOrigen;
   ProgramaDestino:string;
@@ -22,12 +21,13 @@ export class GenerarProgramaVueloComponent implements OnInit {
   ProgramaFechaL;
   ProgramaHoraS;
   ProgramaHoraL;
-  ProgramaEscala:boolean=false;
-  programa:ProgramaVuelo;
+  ProgramaEscala:boolean;
+  
+  programa:ProgramaVuelo; 
 
-  constructor(private calendar: NgbCalendar, private programavueloservice:ProgramaVueloService) { 
+  constructor(private programavueloservice:ProgramaVueloService) { 
     
-    
+    this.ProgramaEscala=false;  
   }
   ngOnInit() {
   }
@@ -37,8 +37,9 @@ export class GenerarProgramaVueloComponent implements OnInit {
    console.log(form.value);
     this.programavueloservice.postPrograma_vuelo(form.value).subscribe(res=>{
       console.log('entro al post');
-      console.log(res);
+      console.log(res);  
       form.reset();
+    
 
     });
 

@@ -13,8 +13,7 @@ exports.pasajero_list = function(req, res) {
 // Display detail page for a specific Pasajero.
 exports.pasajero_detail = function(req, res) {
     Pasajero.findById(req.params.id).
-        then(pasajero => res.json({ user: pasajero}))
-    //res.send('NOT IMPLEMENTED: Pasajero detail: ' + req.params.id);
+        then(pasajero => res.json({pasajero}))
 };
 
 

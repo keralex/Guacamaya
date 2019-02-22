@@ -13,7 +13,7 @@ exports.programa_vuelo_list = function(req, res) {
 // Display detail page for a specific Programa_vuelo.
 exports.programa_vuelo_detail = function(req, res) {
     Programa_vuelo.findById(req.params.id).
-        then(programa_vuelo => res.json({ user: programa_vuelo}))
+        then(programa_vuelo => res.json({programa_vuelo}))
     //res.send('NOT IMPLEMENTED: Programa_vuelo detail: ' + req.params.id);
 };
 
@@ -47,10 +47,6 @@ exports.programa_vuelo_update_post = function(req, res) {
         req.body,
         { where: { id: req.params.id } }
       )
-    .then(result =>
-        res.send("Success")
-    ).catch(err=>
-        res.send("Error")
-    )
+    
     //res.send('NOT IMPLEMENTED: Programa_vuelo update POST');
 };

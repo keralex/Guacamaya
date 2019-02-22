@@ -26,9 +26,10 @@ const sequelize = new Sequelize('guacamaya', 'root', 'password',{
   //relaciones
 
   Pasaje.belongsTo(Programa_vuelo);
+  Pasaje.belongsTo(Pasajero);
 
 
-  sequelize.sync({ force: false })
+  sequelize.sync({ force: true })
   .then(() => {
     console.log(`Database & tables created!`)
   });

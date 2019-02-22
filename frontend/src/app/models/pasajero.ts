@@ -8,7 +8,7 @@ export class Pasajero {
     pasaporte?:string;
     edad?: number;
     sexo?: string;
-    cant_maletas:number;
+    cant_maletas?:number;
 
     
 }

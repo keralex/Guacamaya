@@ -1,3 +1,79 @@
-<p>
-  modificar-programa-vuelo works!
-</p>
+<div class="container-fluid">
+  <div class="row justify-content-md-center">
+   
+    <div class="col-lg-8">
+        <div class="container box shadow-lg p-3 mb-5 bg-white rounded">
+            <form #programaForm="ngForm" (ngSubmit)="addPrograma(programaForm)">
+              <h3>Modificar Programa de Vuelo</h3>
+               <div class="form-row">
+
+                <!-- seleccionar programa -->
+                  <div class="form-group col-md-9">
+
+                      <label>Escoge Programa</label>
+                      
+                      <select class="form-control" id="id" name="id" #name="ngModel" [(ngModel)]="id" (change)="changePrograma($event)">
+                        <option *ngFor="let programa of programaVuelos" [value]="programa.id">{{programa.id}}</option>
+                      </select>
+                    </div>
+
+                    <!-- modificar programa -->
+
+                    <div class="form-row" *ngIf="cambia">
+
+                      
+                        <div class="form-group col-md-6">
+                            <label>Origen</label>
+                            <input  class="form-control"  placeholder="Origen" type="text" id="origen" name="origen" #name="ngModel" [(ngModel)]="ProgramaOrigen">
+                          </div>
+    
+                          <div class="form-group col-md-6">
+                              <label>Destino</label>
+                              <input type="text" class="form-control"  placeholder="Destino" id="destino" name="destino" #name="ngModel" [(ngModel)]="ProgramaDestino">
+                            </div>
+                            
+    
+                            <div class="form-group col-md-6">
+                                <label for="example-date-input" class="col-form-label">Fecha Salida</label>
+                                  <input class="form-control" type="date" value="2011-08-19" id="fecha_salida" name="fecha_salida" #name="ngModel" [(ngModel)]="ProgramaFechaS">
+                            </div>
+                     
+                            
+                            <div class="form-group col-md-6">
+                                <label for="example-time-input" class="col-form-label">Hora Salida</label>
+                                  <input class="form-control" type="time" value="13:45:00" step="1" id="hora_salida" name="hora_salida" #name="ngModel" [(ngModel)]="ProgramaHoraS">
+                              </div>
+    
+                              
+                              <div class="form-group col-md-6">
+                                  <label for="example-date-input" class=" col-form-label">Fecha Llegada</label>
+                                    <input class="form-control" type="date" value="2011-08-19" id="fecha_llegada" name="fecha_llegada" #name="ngModel" [(ngModel)]=" ProgramaFechaL">
+                              </div>
+                              <div class="form-group col-md-6">
+                                  <label for="example-time-input" class=" col-form-label">Hora Llegada</label>
+                                    <input class="form-control" type="time" value="13:45:00" step="1" id="hora_llegada" name="hora_llegada" #name="ngModel" [(ngModel)]="ProgramaHoraL">
+                                </div>
+      
+      
+                                <div class="form-group col-md-5">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="posee_escala" value="true" name="posee_escala" #name='ngModel' [(ngModel)]="ProgramaEscala">
+                                    <label class="form-check-label" for="gridCheck">
+                                      Tiene Escala
+                                    </label>
+                                  </div>
+                                </div>
+                      
+                    </div>
+
+
+
+
+
+
+                    <div class="botones">
+                        <button class="btn btn-primary" type="submit" >Modificar</button>
+            </div>
+               </div>
+             
+                 

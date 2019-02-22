@@ -49,15 +49,16 @@ export class ModificarPasajeComponent implements OnInit {
 
   changePasajero(event){
     console.log(this.selectedPasajeroPasaporte);
-    
     this.pasajeroservice.getPasajero(this.selectedPasajeroPasaporte).subscribe(res=>{
       console.log(res);
-      this.AsignarDatos();
+    
+      this.AsignarDatos(res);
 
     });
   }
 
-  AsignarDatos(){
+  AsignarDatos(pasajero:Pasajero){
+    this.pasajero=pasajero;
     console.log(this.pasajero);
     this.cambia=true;
 
