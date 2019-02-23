@@ -1,6 +1,6 @@
 
 module.exports = (sequelize, type) => {
-    var vuelo=sequelize.define('vuelo', {
+    return sequelize.define('vuelo', {
        id: {
           type: type.INTEGER,
           primaryKey: true,
@@ -20,16 +20,6 @@ module.exports = (sequelize, type) => {
               allowNull:false
           }
   
-    },{});
-    vuelo.associate=function(models){
-        models.vuelo.belongsTo(models.avion,{
-             foreignKey:'avion_id',
-             targetKey:'id'
-         });
-         models.vuelo.belongsTo(models.ruta,{
-            foreignKey:'ruta_id',
-            targetKey:'id'
-        });
-       };  
+    },{}); 
 
 }
