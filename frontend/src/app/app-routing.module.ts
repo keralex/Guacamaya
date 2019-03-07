@@ -35,6 +35,9 @@ import { EliminarProgramaVueloComponent } from './components/vuelosComponent/eli
 import { ModificarProgramaVueloComponent } from './components/vuelosComponent/modificar-programa-vuelo/modificar-programa-vuelo.component';
 import { AsignarVueloComponent } from './components/check_in/asignar-vuelo/asignar-vuelo.component';
 import { RegistrarPasajeroComponent } from './components/check_in/registrar-pasajero/registrar-pasajero.component';
+import { EliminarVueloComponent } from './components/vuelosComponent/eliminar-vuelo/eliminar-vuelo.component';
+import { ModificarVueloComponent } from './components/vuelosComponent/modificar-vuelo/modificar-vuelo.component';
+import { VuelosComponent } from './components/vuelosComponent/vuelos/vuelos.component';
 
 const routes: Routes = [
   // home
@@ -92,7 +95,6 @@ const routes: Routes = [
 {path:'admin_vuelo',
 children:[
   {path:'',redirectTo:'planificar',pathMatch:'full'},
-  {path:'planificar',component:PlanificarVueloComponent},
   {path:'registrar_avion',component:RegistrarAvionesComponent},
   {path:'modificar_estado_aviones',component:ModificarEstadoAvionesComponent},
   {path:'proveedores',component:ProveedoresComponent},
@@ -103,6 +105,14 @@ children:[
   {path:'generar_programa', component:GenerarProgramaVueloComponent},
   {path:'eliminar_programa', component:EliminarProgramaVueloComponent},
   {path:'modificar_programa', component:ModificarProgramaVueloComponent},
+  {path:'planificar',component:PlanificarVueloComponent},
+  {path:'eliminar_vuelo', component:EliminarVueloComponent},
+  {path:'modificar_vuelo', component:ModificarVueloComponent},
+  {path:'vuelos', component:VuelosComponent},
+
+
+
+
   
 
 
