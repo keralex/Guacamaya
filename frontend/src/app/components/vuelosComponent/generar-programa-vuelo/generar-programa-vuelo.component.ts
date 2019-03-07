@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {NgbDateStruct, NgbCalendar} from '@ng-bootstrap/ng-bootstrap';
 import { NgForm } from '@angular/forms';
-import {NgbTimeStruct} from '@ng-bootstrap/ng-bootstrap';
 import {ProgramaVueloService} from './../../../services/programa-vuelo.service';
 import {ProgramaVuelo} from './../../../models/programa-vuelo'
 
@@ -39,8 +37,6 @@ export class GenerarProgramaVueloComponent implements OnInit {
       console.log('entro al post');
       console.log(res);  
       form.reset();
-    
-
     });
 
 

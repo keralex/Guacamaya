@@ -7,10 +7,6 @@ module.exports = (sequelize, type) => {
           autoIncrement: true,
 
         },
-        duracion_aprox:{
-            type: type.TIME,
-            allowNull: false    
-          },
           ruta_id:{
               type:type.INTEGER,
               allowNull:false

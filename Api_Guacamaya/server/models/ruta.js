@@ -13,7 +13,11 @@ module.exports = (sequelize, type) => {
         distancia:{
             type: type.FLOAT,
             allowNull: false    
-          } 
+          } ,
+          duracion_aprox:{
+              type: type.TIME,
+              allowNull: false    
+            }
   
     })
 }

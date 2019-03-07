@@ -3,21 +3,24 @@
    
     <div class="col-lg-8">
         <div class="container box shadow-lg p-3 mb-5 bg-white rounded">
-            <form>
+            <form #vueloForm="ngForm" (ngSubmit)="addVuelo(vueloForm)">
             <h3>Planificar Vuelo</h3>
             <br>
+            <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputEmail4">Avion</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="avion">
+                    <input type="number" class="form-control" placeholder="avion_id" id="avion_id" name="avion_id" #name="ngModel" [(ngModel)]="avion_id">
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="inputEmail4">Ruta a Realizar</label>
-                  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="ruta_avion">
+                  <label for="inputEmail4">Ruta </label>
+                  <input type="number" class="form-control"placeholder="ruta_id"  id="ruta_id" name="ruta_id" #name="ngModel" [(ngModel)]="ruta_id">
                 </div>
+                
                 <div class="botones">
-                    <a class="btn btn-primary" role="button" routerLink="/check_in"> Devolver </a>
-        
-                </div>  
+                  <button class="btn btn-primary" type="submit">Generar</button>
+                </div> 
+            </div>
+             
         
               </form>
         </div>
