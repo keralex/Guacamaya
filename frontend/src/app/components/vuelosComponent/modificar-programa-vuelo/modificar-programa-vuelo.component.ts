@@ -42,7 +42,6 @@ export class ModificarProgramaVueloComponent implements OnInit {
     this.programavueloservice.getPrograma_vuelo(this.id).subscribe(res=>{
       console.log(res);
       this.AsignarDatos();
-      
     })
   }
   AsignarDatos(){
@@ -56,7 +55,5 @@ export class ModificarProgramaVueloComponent implements OnInit {
      console.log(res);
      
    });
-
-
   }
 }

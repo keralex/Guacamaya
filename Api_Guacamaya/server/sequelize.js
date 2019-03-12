@@ -33,7 +33,7 @@ const sequelize = new Sequelize('guacamaya', 'root', 'password',{
   Pasaje.belongsTo(Pasajero);
 
 
-  sequelize.sync({ force: true })
+  sequelize.sync({ force: false })
   .then(() => {
     console.log(`Database & tables created!`)
   });

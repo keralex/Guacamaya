@@ -1,3 +1,23 @@
-<p>
-  eliminar-vuelo works!
-</p>
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+     
+      <div class="col-lg-8">
+          <div class="container box shadow-lg p-3 mb-5 bg-white rounded">
+              <form #vueloForm="ngForm" (ngSubmit)="deleteVuelo(vueloForm)">
+                <h3>Eliminar Vuelo</h3>
+                 <div class="form-row">
+                    <div class="form-group col-md-9">
+  
+                        <label>Escoge Vuelo</label>
+                        
+                        <select class="form-control" id="vuelo" name="vuelo" #name="ngModel" [(ngModel)]="selectedVuelo" (change)="changeVuelo($event)">
+                          <option *ngFor="let vuelo of vuelos" [value]="vuelo.id">{{vuelo.id}}</option>
+                        </select>
+                      </div>
+                      <div class="botones">
+                          <button class="btn btn-primary" type="submit" >eliminar</button>
+              </div>
+                 </div>
+               
+                   
+  

@@ -32,27 +32,18 @@ exports.vuelo_create_post = function(req, res) {
 exports.vuelo_delete_post = function(req, res) {
     Vuelo.destroy({
         where: {
-          pasaporte: req.params.id
+          id: req.params.id
         }
       });
-   // res.send('NOT IMPLEMENTED: Vuelo delete POST');
 };
 
-// Handle Vuelo delete on POST.
-exports.vuelo_delete_post2 = function(req, res) {
-  res.send('NOT IMPLEMENTED: Vuelo delete Get');
-};
+
 
 // Handle Vuelo update on POST.
 exports.vuelo_update_post = function(req, res) {
     Vuelo.update(
         req.body,
-        { where: { pasaporte: req.params.id } }
+        { where: { id: req.params.id } }
       )
-    .then(result =>
-        res.send("Success")
-    ).catch(err=>
-        res.send("Error")
-    )
-    //res.send('NOT IMPLEMENTED: Vuelo update POST');
-};
+    
+    };

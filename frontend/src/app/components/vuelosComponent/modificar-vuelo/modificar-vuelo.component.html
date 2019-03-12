@@ -1,3 +1,42 @@
-<p>
-  modificar-vuelo works!
-</p>
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+      <div class="col-lg-8">
+          <div class="container box shadow-lg p-3 mb-5 bg-white rounded">
+
+              <form #vueloForm="ngForm" (ngSubmit)="addVuelo(vueloForm)">
+
+                <h3>Modificar Vuelo</h3>
+                 <div class="form-row">
+                  <!-- seleccionar programa -->
+                    <div class="form-group col-md-9">
+  
+                        <label>Escoge el Vuelo</label>
+                        <select class="form-control" id="id" name="id" #name="ngModel" [(ngModel)]="id" (change)="changeVuelo($event)">
+                          <option *ngFor="let vuelo of vuelos" [value]="vuelo.id">{{vuelo.id}}</option>
+                        </select>
+                      </div>
+  
+                      <!-- modificar programa -->
+  
+                      <div class="row" *ngIf="cambia">
+                        
+                          <div class="form-group col-md-7">
+                              <label>Avion</label>
+                              <input  class="form-control"  placeholder="avion_id" type="number" id="avion_id" name="avion_id" #name="ngModel" [(ngModel)]="avion_id">
+                            </div>
+                            <div class="form-group col-md-7">
+                                <label>Ruta</label>
+                                <input  class="form-control"  placeholder="ruta_id" type="number" id="ruta_id" name="ruta_id" #name="ngModel" [(ngModel)]="ruta_id">
+                              </div>
+      
+                      </div>
+                      <div class="botones">
+                          <button class="btn btn-primary" type="submit" >Modificar</button>
+              </div>
+                 </div>
+              </form>
+          </div>
+      </div>
+               
+                   
+  

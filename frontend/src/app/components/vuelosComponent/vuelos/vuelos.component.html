@@ -1,3 +1,25 @@
-<p>
-  vuelos works!
-</p>
+<div class="container-fluid">
+    <div class="row justify-content-md-center">
+     
+  
+      <div class="col-lg-8">
+          <div class="container box shadow-lg p-3 mb-5 bg-white rounded">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Ruta</th>
+                  <th scope="col">Avion</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let vuelo of vuelos">
+                  <th>{{vuelo.ruta_id}}</th>
+                  <th>{{vuelo.avion_id}}</th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+      </div>
+     
+    </div>
+  </div>
