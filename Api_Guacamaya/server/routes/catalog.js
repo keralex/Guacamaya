@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 var programa_vuelo_controller = require('../controllers/programa_vueloController');
 var vuelo_controller=require('../controllers/vueloController');
+var ruta_controller=require('../controllers/rutaController');
 
 //PASAJEROS
 // Require controller modules.
@@ -45,6 +46,22 @@ router.post('/vuelo/:id/update', vuelo_controller.vuelo_update_post);
 router.get('/vuelo/:id', vuelo_controller.vuelo_detail);
 // GET request for list of all customers.
 router.get('/vuelo', vuelo_controller.vuelo_list);
+
+
+
+//RUTA
+
+// Require controller modules.
+// POST request for creating ruta.
+router.post('/ruta/create', ruta_controller.ruta_create_post);
+// POST request to delete ruta.
+router.post('/ruta/:id/delete', ruta_controller.ruta_delete_post);
+// POST request to update ruta.
+router.post('/ruta/:id/update', ruta_controller.ruta_update_post);
+// GET request for oneruta.
+router.get('/ruta/:id', ruta_controller.ruta_detail);
+// GET request for list of all customers.
+router.get('/ruta', ruta_controller.ruta_list);
 
 
 

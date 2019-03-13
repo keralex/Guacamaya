@@ -53,6 +53,10 @@ import { ProgramaVueloService } from './services/programa-vuelo.service';
 import { EliminarVueloComponent } from './components/vuelosComponent/eliminar-vuelo/eliminar-vuelo.component';
 import { ModificarVueloComponent } from './components/vuelosComponent/modificar-vuelo/modificar-vuelo.component';
 import { VuelosComponent } from './components/vuelosComponent/vuelos/vuelos.component';
+import { RegistrarRutaComponent } from './components/rutaComponents/registrar-ruta/registrar-ruta.component';
+import { EliminarRutaComponent } from './components/rutaComponents/eliminar-ruta/eliminar-ruta.component';
+import { ModificarRutaComponent } from './components/rutaComponents/modificar-ruta/modificar-ruta.component';
+import { RutasComponent } from './components/rutaComponents/rutas/rutas.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -102,6 +106,10 @@ import { VuelosComponent } from './components/vuelosComponent/vuelos/vuelos.comp
     EliminarVueloComponent,
     ModificarVueloComponent,
     VuelosComponent,
+    RegistrarRutaComponent,
+    EliminarRutaComponent,
+    ModificarRutaComponent,
+    RutasComponent,
   ],
   imports: [
     BrowserModule,

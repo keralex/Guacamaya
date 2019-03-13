@@ -3,6 +3,7 @@ const PasajeroModel = require('./models/pasajero');
 const PasajeModel=require('./models/pasaje');
 const Programa_vueloModel=require('./models/programa_vuelo');
 const vueloModel=require('./models/vuelo');
+const rutaModel=require('./models/ruta');
 //sequelize DB
 const sequelize = new Sequelize('guacamaya', 'root', 'password',{
     host: 'localhost',
@@ -26,6 +27,8 @@ const sequelize = new Sequelize('guacamaya', 'root', 'password',{
   const Programa_vuelo=Programa_vueloModel(sequelize,Sequelize);
   // vuelo
   const Vuelo=vueloModel(sequelize,Sequelize);
+  //ruta
+  const Ruta=rutaModel(sequelize,Sequelize);
 
   //relaciones
 
@@ -37,11 +40,12 @@ const sequelize = new Sequelize('guacamaya', 'root', 'password',{
   .then(() => {
     console.log(`Database & tables created!`)
   });
+
+  
   module.exports = {
     Pasajero,
     Pasaje,
     Programa_vuelo,
-    Vuelo
-
-    
+    Vuelo,
+    Ruta
   }
