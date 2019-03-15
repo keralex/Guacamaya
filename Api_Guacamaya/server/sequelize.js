@@ -40,9 +40,25 @@ const sequelize = new Sequelize('guacamaya', 'root', 'password',{
   //Pista
   const Pista=pistaModel(sequelize,Sequelize);
 
-  //relaciones
+  //RELACIONES
+  Programa_vuelo.hasMany(Pasaje)
   Pasaje.belongsTo(Programa_vuelo);
+
   Pasaje.belongsTo(Pasajero);
+
+  Programa_vuelo.belongsToMany(Vuelo,{through:'programas_x_vuelo', as:'programa_vuelo'});
+  Vuelo.belongsToMany(Programa_vuelo,{through:'programas_x_vuelo'});
+
+  Vuelo.belongsTo(Ruta,{ as: 'ruta' });
+
+  Ruta.belongsToMany(Aeropuerto,{through:'aeropuerto_x_ruta'});
+  Aeropuerto.belongsToMany(Ruta,{through:'aeropuerto_x_ruta'});
+
+  Pista.belongsTo(Aeropuerto);
+
+
+  Vuelo.belongsToMany(Avion,{through:'aviones_x_vuelos'});
+  Avion.belongsToMany(Vuelo,{through:'aviones_x_vuelos'});
 
 
   //Crear las tablas
