@@ -1,0 +1,24 @@
+
+<div class="container-fluid">
+  <div class="row justify-content-md-center">
+   
+    <div class="col-lg-8">
+        <div class="container box shadow-lg p-3 mb-5 bg-white rounded">
+            <form #aeropuertoForm="ngForm" (ngSubmit)="deleteAeropuerto(aeropuertoForm)">
+              <h3>Eliminar Aeropuerto</h3>
+               <div class="form-row">
+                  <div class="form-group col-md-9">
+
+                      <label>Escoge el aeropuerto</label>
+                      
+                      <select class="form-control" id="aeropuerto" name="aeropuerto" #name="ngModel" [(ngModel)]="selectedAeropuerto" (change)="changeAeropuerto($event)">
+                        <option *ngFor="let aeropuerto of aeropuertos" [value]="aeropuerto.IATA">{{aeropuerto.IATA}}</option>
+                      </select>
+                    </div>
+                    <div class="botones">
+                        <button class="btn btn-primary" type="submit" >eliminar</button>
+            </div>
+               </div>
+             
+                 
+

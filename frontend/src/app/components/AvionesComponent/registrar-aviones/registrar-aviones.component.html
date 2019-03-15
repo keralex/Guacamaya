@@ -4,106 +4,129 @@
      
       <div class="col-lg-8">
           <div class="container box shadow-lg p-3 mb-5 bg-white rounded">
-              <form>
+              <form #avionForm="ngForm" (ngSubmit)="addAvion(avionForm)">
               <h3>Registrar avion</h3>
               <br>
-              <h2>Datos Generales</h2>
+              
                 <div class="form-row">
+                        
+                        <div class="form-group col-md-6">
+                            <label>Modelo</label>
+                            <input type="text" class="form-control" id="modelo" name="modelo" #name="ngModel" [(ngModel)]="modelo" placeholder="modelo">
+                        </div>
+
+                        <div class="form-group col-md-6">
+                          <label >Fabricante</label>
+                          <input type="text" class="form-control" id="fabricante" name="fabricante" #name="ngModel" [(ngModel)]="fabricante"placeholder="fabricante">
+                        </div>
+
+                        <div class="form-group col-md-6">
+                          <label >Cantidad de Asientos VIP</label>
+                          <input type="number" class="form-control" id="cant_asientos_VIP" name="cant_asientos_VIP" #name="ngModel" [(ngModel)]="cant_asientos_VIP" placeholder="cant_asientos_vip">
+                        </div>
+
+                        <div class="form-group col-md-6">
+                          <label>Cantidad de Asientos Turista</label>
+                          <input type="number" class="form-control" id="cant_asientos_turista" name="cant_asientos_turista" #name="ngModel" [(ngModel)]="cant_asientos_turista" placeholder="cant_asientos_economica">
+                        </div>
+
+                        <div class="form-group col-md-3">
+                          <label >Peso Vacio</label>
+                          <input type="number" class="form-control" id="peso_vacio" name="peso_vacio" #name="ngModel" [(ngModel)]="peso_vacio" placeholder="peso_vacio">
+                        </div>
+
+                        <div class="form-group col-md-3">
+                          <label >Peso Maximo</label>
+                          <input type="number" class="form-control"  id="peso_max" name="peso_max" #name="ngModel" [(ngModel)]="peso_max" placeholder="peso_max">
+                        </div>
+
+                        <div class="form-group col-md-3">
+                          <label >Equipaje Maximo en Kg</label>
+                          <input type="number" class="form-control"  id="equipaje_max" name="equipaje_max" #name="ngModel" [(ngModel)]="equipaje_max" placeholder="equipaje_max">
+                        </div>
+
+                        <div class="form-group col-md-3">
+                          <label>Cabina Maxima</label>
+                          <input type="number" class="form-control"  id="cabina_max" name="cabina_max" #name="ngModel" [(ngModel)]="cabina_max" placeholder="cabina_max">
+                        </div>
+                        
+                        <div class="form-group col-md-6">
+                          <label>Distancia para Despegar</label>
+                          <input type="number" class="form-control"  id="dist_despegue" name="dist_despegue" #name="ngModel" [(ngModel)]="dist_despegue" placeholder="distancia_despegue">
+                        </div>
+
+                        <div class="form-group col-md-6">
+                          <label>Distancia para Aterrizar</label>
+                          <input type="number" class="form-control"  id="dist_aterrizaje" name="dist_aterrizaje" #name="ngModel" [(ngModel)]="dist_aterrizaje" placeholder="distancia_aterrizar">
+                        </div>
+
+                        <div class="form-group col-md-6">
+                          <label>Velocidad Maxima</label>
+                          <input type="number" class="form-control" id="velocidad_max" name="velocidad_max" #name="ngModel" [(ngModel)]="velocidad_max" placeholder="vel_max">
+                          </div>
+
+                          <div class="form-group col-md-6">
+                            <label>Velocidad Crucero</label>
+                            <input type="number" class="form-control"  id="velocidad_crucero" name="velocidad_crucero" #name="ngModel" [(ngModel)]="velocidad_crucero" placeholder="vel_crucero">
+                          </div>
+
+                          <div class="form-group col-md-6">
+                            <label>Cantidad de Baños</label>
+                            <input type="number" class="form-control"  id="cant_banos" name="cant_banos" #name="ngModel" [(ngModel)]="cant_banos" placeholder="cant_banos">
+                          </div>
+
+                          <div class="form-group col-md-6">
+                            <label>Cantidad Salidas de Emergencia</label>
+                            <input type="number" class="form-control"  id="cant_salidas_emergencia" name="cant_salidas_emergencia" #name="ngModel" [(ngModel)]="cant_salidas_emergencia" placeholder="cant_emergencia">
+                          </div>
+
+                          <div class="form-group col-md-6">
+                            <label>Tipo de Combustible</label>
+                            <input type="text" class="form-control"  id="combustible_tipo" name="combustible_tipo" #name="ngModel" [(ngModel)]="combustible_tipo" placeholder="tipo_combustible">
+                          </div>
+
+                          <div class="form-group col-md-6">
+                            <label>Cantidad de Combustible</label>
+                            <input type="number" class="form-control"  id="combustible_cant" name="combustible_cant" #name="ngModel" [(ngModel)]="combustible_cant" placeholder="combustible_cant">
+                          </div>
+
+                          <div class="form-group col-md-4">
+                            <label >Posee Televisiones</label>
+                            <select class="form-control"  id="television" name="television" #name="ngModel" [(ngModel)]="television">
+                                <option [value]="true">Si</option>
+                                <option [value]="false">No</option>
+                              </select>
+                          </div>
+
+                          <div class="form-group col-md-4">
+                            <label > Internet</label>
+                            <select class="form-control"  id="internet" name="internet" #name="ngModel" [(ngModel)]="internet">
+                                <option [value]="true">Si</option>
+                                <option [value]="false">No</option>
+                              </select>
+                          </div>
+
+                          <div class="form-group col-md-4">
+                            <label >Alquilado</label>
+                            <select class="form-control"  id="avion_alquilado" name="avion_alquilado" #name="ngModel" [(ngModel)]="avion_alquilado">
+                                <option [value]="true">Si</option>
+                                <option [value]="false">No</option>
+                              </select>
+                          </div>
+
+                          <div class="form-group col-md-6">
+                            <label for="inputEmail4">Estado</label>
+                            <select class="form-control"  id="estado" name="estado" #name="ngModel" [(ngModel)]="estado">
+                                <option>Disponible</option>
+                                <option>En vuelo</option>
+                                <option>Mantenimiento</option>
+                                <option>Fuera de Servicio</option>
+                              </select>
+                        </div>
                   
-                  <div class="form-group col-md-6">
-                      <label for="inputEmail4">Modelo</label>
-                      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="modelo">
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputEmail4">Fabricante</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="fabricante">
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputEmail4">Cantidad de Asientos VIP</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="cant_asientos_vip">
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputEmail4">Cantidad de Asientos Economica</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="cant_asientos_economica">
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputEmail4">Peso Vacio</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="peso_vacio">
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputEmail4">Peso Maximo</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="peso_max">
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputEmail4">Kg en Equipaje Maximo</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="equipaje_max">
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputEmail4">Cabina Maxima</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="cabina_max">
-                  </div>
-                  
-                  <div class="form-group col-md-6">
-                    <label for="inputEmail4">Distancia para Despegar</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="distancia_despeje">
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputEmail4">Distancia para Aterrizar</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="distancia_aterrizar">
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputEmail4">Velocidad Maxima</label>
-                    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="vel_max">
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label for="inputEmail4">Velocidad Crucero</label>
-                      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="vel_crucero">
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label for="inputEmail4">Cantidad de Baños</label>
-                      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="cant_banos">
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label for="inputEmail4">Cantidad Salidas de Emergencia</label>
-                      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="cant_emergencia">
-                    </div>
-                    <div class="form-group col-md-4">
-                      <label for="inputEmail4">Tipos de Asiento</label>
-                      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="tipos_asiento">
-                    </div>
-                    <div class="form-group col-md-4">
-                      <label for="inputEmail4">Tipo de Combustible</label>
-                      <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="tipo_combustible">
-                    </div>
-                    <div class="form-group col-md-4">
-                      <label for="inputEmail4">Posee Televisiones</label>
-                      <select class="form-control" id="exampleFormControlSelect1">
-                          <option>--</option>
-                          <option>Si</option>
-                          <option>No</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label for="inputEmail4"> Internet</label>
-                      <select class="form-control" id="exampleFormControlSelect1">
-                          <option>--</option>
-                          <option>Si</option>
-                          <option>No</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label for="inputEmail4">Estado</label>
-                      <select class="form-control" id="exampleFormControlSelect1">
-                          <option>--</option>
-                          <option>Disponible</option>
-                          <option>En vuelo</option>
-                          <option>Mantenimiento</option>
-                          <option>Fuera de Servicio</option>
-                        </select>
-                  </div>
                   </div>
                   <div class="botones">
-                      <a class="btn btn-primary" role="button" routerLink="/check_in"> Devolver </a>
+                    <button class="btn btn-primary" type="submit">registrar</button>
                   </div>  
                 </form>
           </div>

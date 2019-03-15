@@ -1,3 +1,55 @@
-<p>
-  modificar-ruta works!
-</p>
+<div class="container-fluid">
+  <div class="row justify-content-md-center">
+   
+    <div class="col-lg-8">
+        <div class="container box shadow-lg p-3 mb-5 bg-white rounded">
+            <form #rutaForm="ngForm" (ngSubmit)="addRuta(rutaForm)">
+              <h3>Modificar Ruta</h3>
+               <div class="form-row">
+
+                <!-- seleccionar programa -->
+                  <div class="form-group col-md-9">
+
+                      <label>Escoge la ruta</label>
+                      
+                      <select class="form-control" id="id" name="id" #name="ngModel" [(ngModel)]="selectedRuta" (change)="changeRuta($event)">
+                        <option *ngFor="let ruta of rutas" [value]="ruta.id">{{ruta.id}}</option>
+                      </select>
+                    </div>
+
+                    <!-- modificar programa -->
+
+                    <div class="form row" *ngIf="cambia">
+                      
+                    <div class="form-group col-md-6">
+                      <label>Primer Aeropuerto</label>
+                      <input  class="form-control"  placeholder="Aeropuerto" type="text" id="IATA1" name="IATA1" #name="ngModel" [(ngModel)]="IATA1">
+                    </div>
+                    <div class="form-group col-md-6"> 
+                      <label>Segudo Aeropuerto</label>
+                      <input  class="form-control"  placeholder="Aeropuerto" type="text" id="IATA2" name="IATA2" #name="ngModel" [(ngModel)]="IATA2">
+                    </div>
+                   <div class="form-group col-md-4">
+                          <label for="example-time-input" class="col-form-label">Duracion</label>
+                            <input class="form-control" type="time" value="13:45:00" step="1" id="duracion_aprox" name="duracion_aprox" #name="ngModel" [(ngModel)]="duracion_aprox">
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label>Precio Base</label>
+                    <input  class="form-control"  placeholder="precio_base" type="number" id="precio_base" name="precio_base" #name="ngModel" [(ngModel)]="precio_base">
+                  </div>  
+                <div class="form-group col-md-4">
+                  <label>distancia</label>
+                  <input  class="form-control"  placeholder="distancia" type="number" id="distancia" name="distancia" #name="ngModel" [(ngModel)]="distancia">
+                </div>
+                    
+                      
+                    </div>
+                    <div class="botones">
+                        <button class="btn btn-primary" type="submit" >Modificar</button>
+            </div>
+               </div>
+            </form>
+        </div>
+    </div>
+
+                 

@@ -17,7 +17,15 @@ module.exports = (sequelize, type) => {
           duracion_aprox:{
               type: type.TIME,
               allowNull: false    
-            }
+            },
+          IATA1:{
+                type: type.STRING,
+                allowNull: false    
+              },
+           IATA2:{
+                  type: type.STRING,
+                  allowNull: false    
+                }
   
     })
 }

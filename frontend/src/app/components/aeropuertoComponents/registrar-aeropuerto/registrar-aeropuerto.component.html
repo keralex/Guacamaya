@@ -1,0 +1,42 @@
+<div class="container-fluid">
+  <div class="row justify-content-md-center">
+   
+
+    <div class="col-lg-8">
+        <div class="container box shadow-lg p-3 mb-5 bg-white rounded">
+            <form #aeropuertoForm="ngForm" (ngSubmit)="addAeropuerto(aeropuertoForm)">
+              <h3>Registrar Aeropuerto</h3>
+                <div class="form-row">
+
+                    <div class="form-group col-md-6">
+                      <label>Codigo IATA</label>
+                      <input  class="form-control"  placeholder="Aeropuerto" type="text" id="IATA" name="IATA" #name="ngModel" [(ngModel)]="IATA">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label>Pais</label>
+                      <input  class="form-control"  placeholder="Pais" type="text" id="pais" name="pais" #name="ngModel" [(ngModel)]="pais">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label>Ciudad</label>
+                      <input  class="form-control"  placeholder="Ciudad" type="text" id="ciudad" name="ciudad" #name="ngModel" [(ngModel)]="ciudad">
+                    </div>
+              
+         
+                </div>
+                  
+                <div class="botones">
+                  <button class="btn btn-primary" type="submit">registrar</button>
+              </div>  
+         
+          
+                  </form>
+               </div>
+                  
+                  <hr/>
+                 
+
+                
+        </div>
+    </div>
+   
+  </div>

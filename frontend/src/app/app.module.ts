@@ -57,6 +57,17 @@ import { RegistrarRutaComponent } from './components/rutaComponents/registrar-ru
 import { EliminarRutaComponent } from './components/rutaComponents/eliminar-ruta/eliminar-ruta.component';
 import { ModificarRutaComponent } from './components/rutaComponents/modificar-ruta/modificar-ruta.component';
 import { RutasComponent } from './components/rutaComponents/rutas/rutas.component';
+import { AvionesComponent } from './components/AvionesComponent/aviones/aviones.component';
+import {ModificarAvionComponent} from './components/AvionesComponent/modificar-avion/modificar-avion.component';
+import {EliminarAvionComponent} from './components/AvionesComponent/eliminar-avion/eliminar-avion.component';
+import { RegistrarAeropuertoComponent } from './components/aeropuertoComponents/registrar-aeropuerto/registrar-aeropuerto.component';
+import { EliminarAeropuertoComponent } from './components/aeropuertoComponents/eliminar-aeropuerto/eliminar-aeropuerto.component';
+import { ModificarAeropuertoComponent } from './components/aeropuertoComponents/modificar-aeropuerto/modificar-aeropuerto.component';
+import { AeropuertosComponent } from './components/aeropuertoComponents/aeropuertos/aeropuertos.component';
+import { RegistrarPistaComponent } from './components/aeropuertoComponents/registrar-pista/registrar-pista.component';
+import { EliminarPistaComponent } from './components/aeropuertoComponents/eliminar-pista/eliminar-pista.component';
+import { ModificarPistaComponent } from './components/aeropuertoComponents/modificar-pista/modificar-pista.component';
+import { PistasComponent } from './components/aeropuertoComponents/pistas/pistas.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -110,6 +121,17 @@ import { RutasComponent } from './components/rutaComponents/rutas/rutas.componen
     EliminarRutaComponent,
     ModificarRutaComponent,
     RutasComponent,
+    AvionesComponent,
+    ModificarAvionComponent,
+    EliminarAvionComponent,
+    RegistrarAeropuertoComponent,
+    EliminarAeropuertoComponent,
+    ModificarAeropuertoComponent,
+    AeropuertosComponent,
+    RegistrarPistaComponent,
+    EliminarPistaComponent,
+    ModificarPistaComponent,
+    PistasComponent
   ],
   imports: [
     BrowserModule,

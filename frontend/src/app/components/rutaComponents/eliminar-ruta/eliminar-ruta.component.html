@@ -1,3 +1,23 @@
-<p>
-  eliminar-ruta works!
-</p>
+
+<div class="container-fluid">
+  <div class="row justify-content-md-center">
+   
+    <div class="col-lg-8">
+        <div class="container box shadow-lg p-3 mb-5 bg-white rounded">
+            <form #rutaForm="ngForm" (ngSubmit)="deleteRuta(rutaForm)">
+              <h3>Eliminar Ruta</h3>
+               <div class="form-row">
+                  <div class="form-group col-md-9">
+
+                      <label>Escoge Programa</label>
+                      
+                      <select class="form-control" id="ruta" name="ruta" #name="ngModel" [(ngModel)]="selectedRuta" (change)="changeRuta($event)">
+                        <option *ngFor="let ruta of rutas" [value]="ruta.id">{{ruta.id}}</option>
+                      </select>
+                    </div>
+                    <div class="botones">
+                        <button class="btn btn-primary" type="submit" >eliminar</button>
+            </div>
+               </div>
+             
+                 

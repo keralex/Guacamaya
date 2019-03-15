@@ -9,6 +9,10 @@ module.exports = (sequelize, type) => {
         distancia:{
             type: type.FLOAT,
             allowNull: false    
-          }
+          },
+          IATA:{
+            type: type.STRING,
+            allowNull: false    
+          },
     })
 }

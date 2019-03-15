@@ -1,0 +1,24 @@
+
+<div class="container-fluid">
+  <div class="row justify-content-md-center">
+   
+    <div class="col-lg-8">
+        <div class="container box shadow-lg p-3 mb-5 bg-white rounded">
+            <form #pistaForm="ngForm" (ngSubmit)="deletePista(pistaForm)">
+              <h3>Eliminar Pista</h3>
+               <div class="form-row">
+                  <div class="form-group col-md-9">
+
+                      <label>Escoge el pista</label>
+                      
+                      <select class="form-control" id="pista" name="pista" #name="ngModel" [(ngModel)]="selectedPista" (change)="changePista($event)">
+                        <option *ngFor="let pista of pistas" [value]="pista.id">{{pista.id}}</option>
+                      </select>
+                    </div>
+                    <div class="botones">
+                        <button class="btn btn-primary" type="submit" >eliminar</button>
+            </div>
+               </div>
+             
+                 
+

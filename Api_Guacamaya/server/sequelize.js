@@ -1,9 +1,13 @@
 const Sequelize = require('sequelize');
+//modelos
 const PasajeroModel = require('./models/pasajero');
 const PasajeModel=require('./models/pasaje');
 const Programa_vueloModel=require('./models/programa_vuelo');
 const vueloModel=require('./models/vuelo');
 const rutaModel=require('./models/ruta');
+const avionModel=require('./models/avion');
+const aeropuertoModel=require('./models/aeropuerto');
+const pistaModel=require('./models/pista');
 //sequelize DB
 const sequelize = new Sequelize('guacamaya', 'root', 'password',{
     host: 'localhost',
@@ -29,23 +33,31 @@ const sequelize = new Sequelize('guacamaya', 'root', 'password',{
   const Vuelo=vueloModel(sequelize,Sequelize);
   //ruta
   const Ruta=rutaModel(sequelize,Sequelize);
+  //Avion
+  const Avion=avionModel(sequelize,Sequelize);
+  //Aeropuerto
+  const Aeropuerto=aeropuertoModel(sequelize,Sequelize);
+  //Pista
+  const Pista=pistaModel(sequelize,Sequelize);
 
   //relaciones
-
   Pasaje.belongsTo(Programa_vuelo);
   Pasaje.belongsTo(Pasajero);
 
 
-  sequelize.sync({ force: false })
+  //Crear las tablas
+  sequelize.sync({ force: true })
   .then(() => {
     console.log(`Database & tables created!`)
   });
-
   
   module.exports = {
     Pasajero,
     Pasaje,
     Programa_vuelo,
     Vuelo,
-    Ruta
+    Ruta,
+    Avion,
+    Aeropuerto,
+    Pista
   }

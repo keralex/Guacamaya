@@ -38,6 +38,21 @@ import { RegistrarPasajeroComponent } from './components/check_in/registrar-pasa
 import { EliminarVueloComponent } from './components/vuelosComponent/eliminar-vuelo/eliminar-vuelo.component';
 import { ModificarVueloComponent } from './components/vuelosComponent/modificar-vuelo/modificar-vuelo.component';
 import { VuelosComponent } from './components/vuelosComponent/vuelos/vuelos.component';
+import { RegistrarRutaComponent } from './components/rutaComponents/registrar-ruta/registrar-ruta.component';
+import { EliminarRutaComponent } from './components/rutaComponents/eliminar-ruta/eliminar-ruta.component';
+import { ModificarRutaComponent } from './components/rutaComponents/modificar-ruta/modificar-ruta.component';
+import { RutasComponent } from './components/rutaComponents/rutas/rutas.component';
+import { ModificarAvionComponent } from './components/AvionesComponent/modificar-avion/modificar-avion.component';
+import { EliminarAvionComponent } from './components/AvionesComponent/eliminar-avion/eliminar-avion.component';
+import { AvionesComponent } from './components/AvionesComponent/aviones/aviones.component';
+import { RegistrarAeropuertoComponent } from './components/aeropuertoComponents/registrar-aeropuerto/registrar-aeropuerto.component';
+import { EliminarAeropuertoComponent } from './components/aeropuertoComponents/eliminar-aeropuerto/eliminar-aeropuerto.component';
+import { ModificarAeropuertoComponent } from './components/aeropuertoComponents/modificar-aeropuerto/modificar-aeropuerto.component';
+import { AeropuertosComponent } from './components/aeropuertoComponents/aeropuertos/aeropuertos.component';
+import { RegistrarPistaComponent } from './components/aeropuertoComponents/registrar-pista/registrar-pista.component';
+import { EliminarPistaComponent } from './components/aeropuertoComponents/eliminar-pista/eliminar-pista.component';
+import { ModificarPistaComponent } from './components/aeropuertoComponents/modificar-pista/modificar-pista.component';
+import { PistasComponent } from './components/aeropuertoComponents/pistas/pistas.component';
 
 const routes: Routes = [
   // home
@@ -48,6 +63,7 @@ const routes: Routes = [
    {path:'home',component:LoginComponent}
    ],  component:HomeComponent
 },
+
 // ventas
 {
   path:'ventas',
@@ -61,10 +77,7 @@ const routes: Routes = [
     {path:'eliminar_pasajero',component:EliminarPasajeroComponent},
     {path:'modificar_pasajero',component:ModificarPasajeComponent 
   },
-
-    
   ],component:VentaComponent
-
 },
 // check-in
 {
@@ -82,6 +95,8 @@ const routes: Routes = [
     {path:'pasajeros_abordo',component:PasajerosAbordoComponent}
   ],component:CheckInComponent
 },
+
+
 //gerente general
 {
   path:'gerente_general',
@@ -90,17 +105,29 @@ const routes: Routes = [
     {path:'lista_empleados',component:ListaEmpleadosComponent},
     {path:'usuarios',component:ListaUsuariosSistemaComponent},
   ],component:GerenteComponent},
+
+
+
 //administrador de vuelo
 
 {path:'admin_vuelo',
 children:[
   {path:'',redirectTo:'planificar',pathMatch:'full'},
+  //aviones
   {path:'registrar_avion',component:RegistrarAvionesComponent},
   {path:'modificar_estado_aviones',component:ModificarEstadoAvionesComponent},
+  {path:'modificarAvion',component:ModificarAvionComponent},
+  {path:'eliminarAvion',component:EliminarAvionComponent},
+  {path:'aviones',component:AvionesComponent},
+
+
+  //alquiler
   {path:'proveedores',component:ProveedoresComponent},
   {path:'alquilar_avion',component:AlquilarAvionComponent},
+  //Mantenimiento
   {path:'registro_fallas',component:RegistroFallasComponent},
   {path:'asignar_mantenimiento',component:AsignarMantenimientoComponent},
+  //Vuelos
   {path:'programa_vuelos', component:ProgramasVueloComponent},
   {path:'generar_programa', component:GenerarProgramaVueloComponent},
   {path:'eliminar_programa', component:EliminarProgramaVueloComponent},
@@ -109,16 +136,27 @@ children:[
   {path:'eliminar_vuelo', component:EliminarVueloComponent},
   {path:'modificar_vuelo', component:ModificarVueloComponent},
   {path:'vuelos', component:VuelosComponent},
+  //rutas
+  {path:'registrarRuta', component:RegistrarRutaComponent},
+  {path:'eliminarRuta', component:EliminarRutaComponent},
+  {path:'modificarRuta', component:ModificarRutaComponent},
+  {path:'rutas', component:RutasComponent},
+  //Aeropuerto
+  {path:'registrarAeropuerto', component:RegistrarAeropuertoComponent},
+  {path:'eliminarAeropuerto', component:EliminarAeropuertoComponent},
+  {path:'modificarAeropuerto', component:ModificarAeropuertoComponent},
+  {path:'aeropuertos', component:AeropuertosComponent},
+  //Pista
+  {path:'registrarPista', component:RegistrarPistaComponent},
+  {path:'eliminarPista', component:EliminarPistaComponent},
+  {path:'modificarPista', component:ModificarPistaComponent},
+  {path:'pistas', component:PistasComponent},
 
-
-
-
-  
-
-
-  
 ],component:AdminVueloComponent
 },
+
+
+
 ];
 
 @NgModule({

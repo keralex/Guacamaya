@@ -1,3 +1,32 @@
-<p>
-  rutas works!
-</p>
+<div class="container-fluid">
+  <div class="row justify-content-md-center">
+   
+
+    <div class="col-lg-8">
+        <div class="container box shadow-lg p-3 mb-5 bg-white rounded">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">IATA1</th>
+                <th scope="col">IATA2</th>
+                <th scope="col">Precio Base</th>
+                <th scope="col">Distancia</th>
+                <th scope="col">Duracion</th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let ruta of rutas">
+                <th>{{ruta.IATA1}}</th>
+                <th>{{ruta.IATA2}}</th>
+                <th>{{ruta.precio_base}}</th>
+                <th>{{ruta.distancia}}</th>
+                <th>{{ruta.duracion_aprox}}</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+   
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="container-fluid">
+  <div class="row justify-content-md-center">
+   
+
+    <div class="col-lg-8">
+        <div class="container box shadow-lg p-3 mb-5 bg-white rounded">
+            <form #pistaForm="ngForm" (ngSubmit)="addPista(pistaForm)">
+              <h3>Registrar Pista</h3>
+                <div class="form-row">
+
+                    <div class="form-group col-md-6">
+                      <label>Distancia de pista</label>
+                      <input  class="form-control"  placeholder="Distancia" type="number" id="distancia" name="distancia" #name="ngModel" [(ngModel)]="distancia">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label>Codigo IATA del Aeropuerto</label>
+                      <input  class="form-control"  placeholder="IATA" type="text" id="IATA" name="IATA" #name="ngModel" [(ngModel)]="IATA">
+                    </div>
+               
+              
+         
+                </div>
+                  
+                <div class="botones">
+                  <button class="btn btn-primary" type="submit">registrar</button>
+              </div>  
+         
+          
+                  </form>
+               </div>
+                  
+                  <hr/>
+                 
+
+                
+        </div>
+    </div>
+   
+  </div>

@@ -72,12 +72,8 @@ module.exports = (sequelize, type) => {
             type:type.INTEGER,
             allowNull: false    
           },
-        cant_salidas_Emergencia: {
+        cant_salidas_emergencia: {
             type:type.INTEGER,
-            allowNull: false    
-          },
-        asiento_tipo: {
-            type: type.STRING,
             allowNull: false    
           },
         internet:{

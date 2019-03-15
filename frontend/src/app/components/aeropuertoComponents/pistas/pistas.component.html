@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="row justify-content-md-center">
+   
+
+    <div class="col-lg-8">
+        <div class="container box shadow-lg p-3 mb-5 bg-white rounded">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">Distancia</th>
+                <th scope="col">Aeropuerto</th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let pista of pistas">
+                <th>{{pista.distancia}}</th>
+                <th>{{pista.IATA}}</th>
+
+     
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+   
+  </div>
+</div>

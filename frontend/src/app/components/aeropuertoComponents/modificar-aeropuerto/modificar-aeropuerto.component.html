@@ -1,0 +1,44 @@
+<div class="container-fluid">
+  <div class="row justify-content-md-center">
+   
+    <div class="col-lg-8">
+        <div class="container box shadow-lg p-3 mb-5 bg-white rounded">
+            <form #aeropuertoForm="ngForm" (ngSubmit)="addAeropuerto(aeropuertoForm)">
+              <h3>Modificar Aeropuerto</h3>
+               <div class="form-row">
+
+                <!-- seleccionar programa -->
+                  <div class="form-group col-md-9">
+
+                      <label>Escoge el Aeropuerto</label>
+                      
+                      <select class="form-control" id="IATA" name="IATA" #name="ngModel" [(ngModel)]="selectedAeropuerto" (change)="changeAeropuerto($event)">
+                        <option *ngFor="let aeropuerto of aeropuertos" [value]="aeropuerto.IATA">{{aeropuerto.IATA}}</option>
+                      </select>
+                    </div>
+
+                    <!-- modificar programa -->
+
+                    <div class="form row" *ngIf="cambia">
+                      
+                      <div class="form-group col-md-6">
+                        <label>Pais</label>
+                        <input  class="form-control"  placeholder="Pais" type="text" id="pais" name="pais" #name="ngModel" [(ngModel)]="pais">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label>Ciudad</label>
+                        <input  class="form-control"  placeholder="Ciudad" type="text" id="ciudad" name="ciudad" #name="ngModel" [(ngModel)]="ciudad">
+                      </div>
+                
+                    
+                      
+                    </div>
+                    <div class="botones">
+                        <button class="btn btn-primary" type="submit" >Modificar</button>
+            </div>
+               </div>
+            </form>
+        </div>
+    </div>
+
+                 

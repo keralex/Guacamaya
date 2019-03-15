@@ -1,7 +1,7 @@
 module.exports = (sequelize, type) => {
     return sequelize.define('aeropuerto', {
-       id: {
-          type: type.INTEGER,
+       IATA: {
+          type: type.STRING,
           primaryKey: true,
           autoIncrement: false,
           allowNull:false

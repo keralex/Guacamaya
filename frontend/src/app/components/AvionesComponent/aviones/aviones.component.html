@@ -1,0 +1,65 @@
+<div class="container-fluid">
+  <div class="row justify-content-md-center">
+   
+
+    <div class="col-lg-12">
+        <h3>Aviones</h3>
+        <div class="container-fluid box shadow-lg p-3 mb-5 bg-white rounded">
+         
+          <table class=" table table-responsive table-striped">
+            
+            <thead>
+              <tr>
+                <th scope="col">Modelo</th>
+                <th scope="col">Fabricante</th>
+                <th scope="col">Estado</th>
+                <th scope="col">cant asientos VIP</th>
+                <th scope="col">cant asientos turista</th>
+                <th scope="col">Peso Vacio</th>
+                <th scope="col">Peso Max</th>
+                <th scope="col">Equipaje Max</th>
+                <th scope="col">Cabina Max</th>
+                <th scope="col">Tipo de Combustible</th>
+                <th scope="col">Cant Combustible</th>
+                <th scope="col">distancia despegue</th>
+                <th scope="col">distancia aterrizaje</th>
+                <th scope="col">Velocidad Max</th>
+                <th scope="col">Velocidad Crucero</th>
+                <th scope="col">cant Baños</th>
+                <th scope="col">cant salidas emergencia</th>
+                <th scope="col">internet</th>
+                <th scope="col">television</th>
+                <th scope="col">alquilado</th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let avion of aviones">
+                <th>{{avion.modelo}}</th>
+                <th>{{avion.fabricante}}</th>
+                <th>{{avion.estado}}</th>
+                <th>{{avion.cant_asientos_VIP}}</th>
+                <th>{{avion.cant_asientos_turista}}</th>
+                <th>{{avion.peso_vacio}}</th>
+                <th>{{avion.peso_max}}</th>
+                <th>{{avion.equipaje_max}}</th>
+                <th>{{avion.cabina_max}}</th>
+                <th>{{avion.combustible_tipo}}</th>
+                <th>{{avion.combustible_cant}}</th>
+                <th>{{avion.dist_despegue}}</th>
+                <th>{{avion.dist_aterrizaje}}</th>
+                <th>{{avion.velocidad_max}}</th>
+                <th>{{avion.velocidad_crucero}}</th>
+                <th>{{avion.cant_banos}}</th>
+                <th>{{avion.cant_salidas_emergencia}}</th>
+                <th>{{avion.internet}}</th>
+                <th>{{avion.television}}</th>
+                <th>{{avion.avion_alquilado}}</th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+   
+  </div>
+</div>
