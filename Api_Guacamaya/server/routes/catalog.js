@@ -6,6 +6,16 @@ var ruta_controller=require('../controllers/rutaController');
 var avion_controller=require('../controllers/avionController');
 var aeropuerto_controller=require('../controllers/aeropuertoController');
 var equipaje_controller=require('../controllers/equipajeController');
+var mantenimiento_controller=require('../controllers/mantenimientoController');
+var pasaje_controller=require('../controllers/pasajeController');
+var tripulacion_controller=require('../controllers/tripulacionController');
+var proveedor_controller=require('../controllers/proveedorController');
+var empleado_controller=require('../controllers/empleadoController');
+var compra_controller=require('../controllers/compraController');
+var cargo_controller=require('../controllers/cargoController');
+var asiento_controller=require('../controllers/asientoController');
+
+
 
 //PASAJEROS
 // Require controller modules.

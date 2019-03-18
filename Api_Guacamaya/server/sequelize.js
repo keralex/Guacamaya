@@ -8,7 +8,19 @@ const rutaModel=require('./models/ruta');
 const avionModel=require('./models/avion');
 const aeropuertoModel=require('./models/aeropuerto');
 const pistaModel=require('./models/pista');
-//sequelize DB
+const asientoModel=require('./models/asiento');
+const empleadoModel=require('./models/empleado');
+const proveedor_charterModel=require('./models/proveedor');
+const equipajeModel=require('./models/equipaje');
+const mantenimientoModel=require('./models/mantenimiento');
+const tripulacionModel=require('./models/tripulacion');
+const cargoModel=require('./models/cargo');
+
+
+
+
+
+//sequelize DB--------------
 const sequelize = new Sequelize('guacamaya', 'root', 'password',{
     host: 'localhost',
     dialect: 'mysql',
@@ -21,7 +33,7 @@ const sequelize = new Sequelize('guacamaya', 'root', 'password',{
     }
   });
 
-  //TABLES
+  //TABLES---------------
 
   //pasajero
   const Pasajero = PasajeroModel(sequelize,Sequelize);
@@ -39,29 +51,58 @@ const sequelize = new Sequelize('guacamaya', 'root', 'password',{
   const Aeropuerto=aeropuertoModel(sequelize,Sequelize);
   //Pista
   const Pista=pistaModel(sequelize,Sequelize);
+  //Asiento
+  const Asiento= asientoModel(sequelize,Sequelize);
+  //Empleado
+  const Empleado=empleadoModel(sequelize,Sequelize);
+  //Proveedor
+  const Proveedor=proveedor_charterModel(sequelize,Sequelize);
+  //Equipaje
+  const Equipaje=equipajeModel(sequelize,Sequelize);
+  //Mantenimiento
+  const Mantenimiento=mantenimientoModel(sequelize,Sequelize);
+  //Tripulacion
+  const Tripulacion=tripulacionModel(sequelize,Sequelize);
+  //Cargo
+  const Cargo=cargoModel(sequelize,Sequelize);
 
-  //RELACIONES
-  Programa_vuelo.hasMany(Pasaje)
+
+
+
+
+
+  //RELACIONES----------------------
+
+  //un programa de vuelo tiene n pasajes
+  Programa_vuelo.hasMany(Pasaje);
   Pasaje.belongsTo(Programa_vuelo);
-
+  //pasaje tiene un pasajero
+  Pasajero.hasMany(Pasaje);
   Pasaje.belongsTo(Pasajero);
-
+  //un pasajero puede comprar varios pasaes
+  Pasajero.hasMany(Pasaje,{as:'Comprador'});
+  Pasaje.belongsTo(Pasajero,{as:'Comprador'});
+  //Un pasajero tiene varias maletas
+  Pasajero.hasMany(Equipaje);
+  Equipaje.belongsTo(Pasajero);
+  //programa de vuelo tiene muchos vuelos y un vuelo puede estar en varios programas
   Programa_vuelo.belongsToMany(Vuelo,{through:'programas_x_vuelo', as:'programa_vuelo'});
   Vuelo.belongsToMany(Programa_vuelo,{through:'programas_x_vuelo'});
-
-  Vuelo.belongsTo(Ruta,{ as: 'ruta' });
-
+  //Un vuelo sigue una ruta
+  Ruta.hasMany(Vuelo);
+  Vuelo.belongsTo(Ruta);
+  //Una ruta tiene muchos aeropuertos y un aeropuerto puede estar en varias rutas
   Ruta.belongsToMany(Aeropuerto,{through:'aeropuerto_x_ruta'});
   Aeropuerto.belongsToMany(Ruta,{through:'aeropuerto_x_ruta'});
-
+  //Un aeropuerto tiene varias pistas
+  Aeropuerto.hasMany(Pista);
   Pista.belongsTo(Aeropuerto);
+  //un vuelo tiene un avion, un avion puede pertenecer a un vuelo
+  Avion.hasMany(Vuelo);
+  Vuelo.belongsTo(Avion);
 
 
-  Vuelo.belongsToMany(Avion,{through:'aviones_x_vuelos'});
-  Avion.belongsToMany(Vuelo,{through:'aviones_x_vuelos'});
-
-
-  //Crear las tablas
+  //CREAR TABLAS--------------
   sequelize.sync({ force: true })
   .then(() => {
     console.log(`Database & tables created!`)
@@ -75,5 +116,13 @@ const sequelize = new Sequelize('guacamaya', 'root', 'password',{
     Ruta,
     Avion,
     Aeropuerto,
-    Pista
+    Pista,
+    Asiento,
+    Empleado,
+    Proveedor,
+    Equipaje,
+    Mantenimiento,
+    Tripulacion,
+    Cargo
+
   }
