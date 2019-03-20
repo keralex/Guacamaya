@@ -34,7 +34,6 @@ const sequelize = new Sequelize('guacamaya', 'root', 'password',{
   });
 
   //TABLES---------------
-
   //pasajero
   const Pasajero = PasajeroModel(sequelize,Sequelize);
   //pasaje
@@ -100,10 +99,23 @@ const sequelize = new Sequelize('guacamaya', 'root', 'password',{
   //un vuelo tiene un avion, un avion puede pertenecer a un vuelo
   Avion.hasMany(Vuelo);
   Vuelo.belongsTo(Avion);
+  //Avion tiene muchos asientos
+  Avion.hasMany(Asiento);
+  Asiento.belongsTo(Asiento);
+  //proveedor tiene varios aviones
+  Proveedor.hasMany(Avion);
+  //vuelo es tripulado por empleados
+  Vuelo.belongsToMany(Empleado, {through:'tripula'});
+  Empleado.belongsToMany(Vuelo, {through:'tripula'});
+  //un empleado tiene un cargo
+  Empleado.hasOne(Cargo);
+  Cargo.belongsTo(Empleado);
+
+  
 
 
   //CREAR TABLAS--------------
-  sequelize.sync({ force: true })
+  sequelize.sync({ force: false })
   .then(() => {
     console.log(`Database & tables created!`)
   });
